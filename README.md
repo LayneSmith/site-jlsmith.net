@@ -1,2 +1,2 @@
-# template-site
-Starting point for html projects
+# Source files for jlsmith.net
+This repo holds the source files for the site jlsmith.net
