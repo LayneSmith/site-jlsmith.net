@@ -1,8 +1,61 @@
 // Imports
 @import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-body {
-    background-color: whitesmoke;
-    color: darken(silver, 10%);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
-// Styles below
+
+.experience, .education, .awards {
+    padding: 20px 40px;
+    article.entry {
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid silver;
+        .time {
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .description {
+            padding-top: 10px;
+        }
+    }
+}
+.awards article.entry{
+    border-bottom: none;
+    padding-bottom: 0px;
+    img {
+        float: left;
+        width: 50px;
+        height: 100px;
+    }
+}
+
+ul.skills {
+    list-style-type: none;
+    padding-top: 30px;
+    .skill{
+        display: inline;
+        background-color: whitesmoke;
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+} 
+
+footer {
+    background-color: $chartCopy;
+    color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+
+    .fab {
+        display: inline;
+        margin-right: 30px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
