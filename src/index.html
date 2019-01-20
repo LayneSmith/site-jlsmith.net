@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
 <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+
 
 <title>Layne Smith | Web Designer and Developer</title>
 
@@ -26,67 +29,82 @@
 <meta name=”twitter:site” content=”@LayneSmith>
 <meta name=”twitter:creator” content=”@LayneSmith>
 
-<header>
-    <img src="images/hero.jpg" alt="Hero image of a ...">
-</header>
+<script id="experience-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <article class="entry">
+        <h4 class="title">{{title}}</h4>
+        <span class="time">{{time}}</span>
+        <p class="description">{{description}}</p>
+        {{!-- <ul class="skills">
+            {{#each skills}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ul>--}}
+    </article>
+    {{/each}}
+</script>
 
-<main>
-    <section class="experience">
-        <h3 class="location">
-            The Dallas Morning News
-        </h3>
-        <article class="entry">
-            <h4 class="title">Job title</h4>
-            <span class="time">Year to year</span>
-            <p class="description">Description</p>
-            <ul class="skills">
-                <li class="skill">Skill 1</li>
-                <li class="skill">Skill 1</li>
-                <li class="skill">Skill 1</li>
-            </ul>
-        </article>
+<script id="award-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <article class="entry">
+        <img src="images/{{logo}}.svg" alt="{{title}}">
+        <h4 class="title">{{title}}</h4>
+        <span class="time">{{time}}</span>
+        <p class="description">{{description}}</p>
+        <span class="winner">{{winner}}</span>
+        <span class="issued-by">{{issued}}</span>
+    </article>
+    {{/each}}
+</script>
 
-        <article class="entry">
-            <h4 class="title">Job title</h4>
-            <span class="time">Year to year</span>
-            <p class="description">Description</p>
-            <ul class="skills">
-                <li class="skill">Skill 1</li>
-                <li class="skill">Skill 1</li>
-                <li class="skill">Skill 1</li>
-            </ul>
-        </article>
+<body>
+    
+    <header>
+        <img src="images/hero.jpg" alt="Hero image of a ......"/>
+    </header>
 
-        <article class="entry">
-            <h4 class="title">Job title</h4>
-            <span class="time">Year to year</span>
-            <p class="description">Description</p>
-            <ul class="skills">
-                <li class="skill">Skill 1</li>
-                <li class="skill">Skill 1</li>
-                <li class="skill">Skill 1</li>
-            </ul>
-        </article>
+    <main>
+        <section class="experience">
+            
+            <h3 class="location">
+                The Dallas Morning News
+            </h3>
+        
+        </section>
 
-        <article class="entry">
-            <h4 class="title">Job title</h4>
-            <span class="time">Year to year</span>
-            <p class="description">Description</p>
-            <ul class="skills">
-                <li class="skill">Skill 1</li>
-                <li class="skill">Skill 1</li>
-                <li class="skill">Skill 1</li>
-            </ul>
-        </article>
 
-    </section>
-    <section class="github">GitHub</section>
-    <section class="education">Education</section>
-    <section class="awards">Awards</section>
-</main>
+        <section class="github">GitHub</section>
+        
 
-<footer>
-    Footer
-</footer>
+        <section class="education">
+            <article class="entry">
+                <h4 class="title">Texas Christian University</h4>
+                <span class="time">1989-2005</span>
+                <p class="description">B.S. in Journalism, B.S. in Criminal Justice</p>
+            </article>
+        </section>
+
+
+        <section class="awards">
+
+            <article class="entry">
+                <img src="images/dallasnews.svg" alt="Name of award">
+                <h4 class="title">2017 Journalist of the Year</h4>
+                <span class="issued-by">The Dallas Morning News</span>
+            </article>
+            
+        </section>
+    </main>
+
+    <footer>
+            <i class="fab fa-github"></i>
+            <i class="fab fa-behance"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-flickr"></i>
+        </div>
+    </footer>
+
+</body>
 
 <script type="text/javascript" src="js/scripts.min.js"></script>
