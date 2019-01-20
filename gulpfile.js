@@ -22,12 +22,12 @@ const options = require('gulp-options');
 const gulpif = require('gulp-if');
 
 // Browers related plugins
-const browserSync = require('browser-sync' ).create();
+const browserSync = require('browser-sync').create();
 
-const jsSRC = './src/js/';
+// const jsSRC = './src/js/';
 const jsFront = 'scripts.js';
-const jsFiles = [ jsFront ];
-const jsURL = './dist/js/';
+const jsFiles = [jsFront];
+// const jsURL = './dist/js/';
 
 // Sources and Destinations
 const paths = {
