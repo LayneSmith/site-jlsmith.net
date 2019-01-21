@@ -8,7 +8,7 @@ const resume = {
     },
     {
       title: 'Graphics and Multimedia Director',
-      time: '2003 – Apr 2016',
+      time: '2003 – 2016',
       description: 'Led, developed and worked in the graphics and multimedia team to create visual content and data-driven journalism across multiple platforms.The role required innovative practices and strong management skills.The team\'s primary role was to create editorial content such as maps, charts, animations, interactive data visualizations and digital design presentations across multiple platforms.',
       skills: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
     },
@@ -87,7 +87,7 @@ const resume = {
       time: '2004',
       description: 'Visual Communication Newspaper Infographic',
       winner: 'Conjoined Twins',
-      issued: 'Dallas Press Club',
+      issued: 'Press Club of Dallas',
       logo: 'katie',
     },
     {
@@ -95,7 +95,7 @@ const resume = {
       time: '2002',
       description: 'Web Site News Graphics',
       winner: 'Fake Drugs, Real Lives',
-      issued: 'Dallas Press Club',
+      issued: 'Press Club of Dallas',
       logo: 'katie',
     },
     {
@@ -103,7 +103,7 @@ const resume = {
       time: '2001',
       description: 'Visual Communication Newspaper Infographic',
       winner: 'Hit to Kill',
-      issued: 'Dallas Press Club',
+      issued: 'Press Club of Dallas',
       logo: 'katie',
     },
     {
@@ -111,7 +111,7 @@ const resume = {
       time: '2001',
       description: 'Web Site News Graphics',
       winner: 'Galveston’s 1900 Hurricane',
-      issued: 'Dallas Press Club',
+      issued: 'Press Club of Dallas',
       logo: 'katie',
     },
     {
@@ -119,8 +119,24 @@ const resume = {
       time: '1999',
       description: 'Visual Communication Newspaper Infographic',
       winner: 'Roaring Rapids Accident',
-      issued: 'Dallas Press Club',
+      issued: 'Press Club of Dallas',
       logo: 'katie',
+    },
+    {
+      title: 'First Place',
+      time: '2003',
+      description: 'Infographics - Class AAAA',
+      winner: '',
+      issued: 'Texas Associated Press Managing Editors',
+      logo: 'tapme',
+    },
+    {
+      title: 'First Place',
+      time: '2000',
+      description: 'Infographics - Class AAAA',
+      winner: '',
+      issued: 'Texas Associated Press Managing Editors',
+      logo: 'tapme',
     },
   ],
 };
