@@ -47,9 +47,18 @@
 <script id="award-template" type="text/x-handlebars-template">
     {{#each this}}
         <div class="entry">
+            {{#if image}}
+            <div class="thumb-container">
+                <img class="award-thumb" src="images/award-thumbs/{{image}}.jpg" alt="{{winner}}" />
+            </div>
+            {{/if}}
             <h4 class="title">{{title}} - {{time}}</h4>
             <p class="description">{{description}}</p>
-            <span class="winner">{{winner}}</span>
+            <span class="winner">{{winner}}
+                {{#if link}}
+                    <a href="{{link}}" target="_blank">Link</a>
+                {{/if}}
+            </span>
         </div>
     {{/each}}
 </script>
@@ -61,6 +70,10 @@
     </header>
 
     <main>
+        <section class="experience">
+            <span class="header">MY WORK</span>
+        </section>
+
         <section class="experience">
             <span class="header">EXPERIENCE</span>
             <div class="logo">
@@ -174,15 +187,15 @@
             <span class="header">AWARDS</span>
             
             <h3 class="location">SOCIETY OF NEWS DESIGN</h3>
-            <p class="description">The <a href="https://www.snd.org/about/">Society of News Design</a> is an international organization dedicated to enhancing the field of visual communication.</p>
+            <p class="award-description">The <a href="https://www.snd.org/about/">Society of News Design</a> is an international organization dedicated to enhancing the field of visual communication.</p>
             <article class="snd-awards"></article>
 
             <h3 class="location">PRESS CLUB OF DALLAS</h3>
-            <p class="description">The <a href="http://pressclubdallas.com/about/">Press Club of Dallas</a> is a regional organization committed to promoting the fundamental tenets of communications and journalism.</p>
+            <p class="award-description">The <a href="http://pressclubdallas.com/about/">Press Club of Dallas</a> is a regional organization committed to promoting the fundamental tenets of communications and journalism.</p>
             <article class="katie-awards"></article>
             
             <h3 class="location">TEXAS APME</h3>
-            <p class="description">The <a href="http://www.txapme.com/">Texas Associated Press Managing Editor's</a> awards is a state-wide contest to recognize outstanding journalism.</p>
+            <p class="award-description">The <a href="http://www.txapme.com/">Texas Associated Press Managing Editor's</a> awards is a state-wide contest to recognize outstanding journalism.</p>
             <article class="tapme-awards"></article>
             
             <h3 class="location">THE DALLAS MORNING NEWS</h3>
