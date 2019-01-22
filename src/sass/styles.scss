@@ -9,6 +9,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    background-color: whitesmoke;
 }
 
 a {
@@ -69,7 +70,7 @@ section.experience {
 }
 
 section.skills {
-    background-color: lighten($chartGreen, 45%);
+    background-color: whitesmoke;
     padding-bottom: 30px;
     margin-bottom: 0px;
     .logos {
@@ -87,7 +88,7 @@ section.skills {
                 line-height: 38px;
                 padding: 10px;
                 font-size: 30px;
-                background-color: lighten($chartGreen, 10%);
+                background-color: none;
                 border-radius: 50%;
                 margin-bottom: 5px;
             }
@@ -99,7 +100,7 @@ section.skills {
 }
 
 section.development {
-    background-color: lighten($chartYellow, 25%);
+    background-color: whitesmoke;
     padding-bottom: 30px;
     .logos {
         display: grid;
@@ -116,7 +117,7 @@ section.development {
                 line-height: 38px;
                 padding: 10px;
                 font-size: 30px;
-                background-color: $chartYellow;
+                background-color: none;
                 border-radius: 50%;
                 margin-bottom: 5px;
             }
@@ -139,8 +140,34 @@ section.education {
 section.awards {
     border-bottom: none;
     padding-bottom: 0px;
+    article {
+        margin-bottom: 20px;
+    }
+    .award-description {
+        margin-bottom: 50px;
+    }
+    .entry {
+        margin-bottom: 50px;
+    }
+    .thumb-container{
+        float: left;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        margin: 0px 10px 10px 0px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
     .location {
         margin-top: 60px;
+        margin-bottom: 5px;
+    }
+    .winner {
+        font-style: italic;
+        font-weight:  200;
     }
     
 }
