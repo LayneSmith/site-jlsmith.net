@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+
+
+<title>Layne Smith | Web Designer and Developer</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name = "keywords" content = "Layne Smith, home, web site, portfolio, hobbies, awards, experience" />
+<meta name = "description" content = "Check out Layne Smith's personal web site. Highlights his web design/devlopment experience, work, skills, photography and awards." />
+<meta name = "author" content = "Layne Smith" />
+<meta name=”robots” content=”index, follow”>
+<link rel=”canonical” href=”http://jlsmith.net/” />
+
+<meta property=”og:type” content=”article” />
+<meta property=”og:title” content=”Layne Smith | Web Designer and Developer” />
+<meta property=”og:description” content=”Check out Layne Smith's personal web site. Highlights his web design/devlopment experience, work, skills, photography and awards.” />
+<meta property=”og:image” content=”LINK TO THE IMAGE FILE” />
+<meta property=”og:url” content=”PERMALINK” />
+<meta property=”og:site_name” content=”SITE NAME” />
+
+<meta name=”twitter:title” content=”Layne Smith | Web Designer and Developer”>
+<meta name=”twitter:description” content=”Check out Layne Smith's personal web site. Highlights his web design/devlopment experience, work, skills, photography and awards.”>
+<meta name=”twitter:image” content=”LINK TO IMAGE”>
+<meta name=”twitter:site” content=”@LayneSmith>
+<meta name=”twitter:creator” content=”@LayneSmith>
+
+<script id="portfolio-template" type="text/x-handlebars-template">
+    {{#each this}}
+        <article class="entry">
+            {{#if preview}}
+                <img class="portfolio-piece" data-preview="{{preview}}"  src="images/animations/{{preview}}-poster.gif" alt="Mock up of {{title}} on laptop screen"/>
+            {{/if}}
+            <h4 class="title">{{title}}</h4>
+            <p class="description">{{description}}
+                {{#if link}}
+                    <a href="{{link}}" target="_blank">Link <i class="fas fa-chevron-right"></i></a>
+                {{/if}}
+            </p>
+        </article>
+    {{/each}}
+</script>
+
+<script id="experience-template" type="text/x-handlebars-template">
+    {{#each this}}
+        <article class="entry">
+            <h4 class="title">{{title}}</h4>
+            <span class="time">{{time}}</span>
+            <p class="description">{{description}}</p>
+            {{!-- <ul class="skills">
+                {{#each skills}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>--}}
+        </article>
+    {{/each}}
+</script>
+
+<script id="award-template" type="text/x-handlebars-template">
+    {{#each this}}
+        <div class="entry">
+            {{#if image}}
+            <div class="thumb-container">
+                <img class="award-thumb" src="images/award-thumbs/{{image}}.jpg" alt="{{winner}}" />
+            </div>
+            {{/if}}
+            <h4 class="title">{{title}} - {{time}}</h4>
+            <span class="winner">
+                {{winner}}
+                {{#if link}}
+                <a href="{{link}}" target="_blank">Link <i class="fas fa-chevron-right"></i></a>
+                {{/if}}
+            </span>
+            <p class="description">{{description}}</p>
+        </div>
+    {{/each}}
+</script>
+
+<body>
+    
+    <header>
+        <img src="images/_defaultImage.jpg" alt="Hero image of a ......"/>
+    </header>
+
+    <main>
+        <section class="portfolio">
+            <span class="header">MY WORK</span>
+        </section>
+
+        <section class="experience">
+            <span class="header">EXPERIENCE</span>
+            <div class="logo">
+                <img src="images/dallasnews-logo.svg" alt="dallasnews.com logo">
+            </div>
+        </section>
+
+        <section class="skills">
+            <span class="header">SKILLS</span>
+            <div class="logos">
+                <div class="container">
+                    <div class="logo"><i class="fab fa-html5"></i></div>
+                    <span class="skill">Visual communication</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fab fa-css3-alt"></i></div>
+                    <span class="skill">Interaction design</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fab fa-sass"></i></div>
+                    <span class="skill">Visual design</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fab fa-js-square"></i></div>
+                    <span class="skill">Data visualization</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fas fa-code"></i></div>
+                    <span class="skill">Project management</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fas fa-code"></i></div>
+                    <span class="skill">Public speaking</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fas fa-chart-pie"></i></div>
+                    <span class="skill">Teaching</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fab fa-python"></i></div>
+                    <span class="skill">Python</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fab fa-github"></i></div>
+                    <span class="skill">GitHub</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="development">
+            <span class="header">DEVELOPMENT</span>
+            <div class="logos">
+                <div class="container">
+                    <div class="logo"><i class="fab fa-html5"></i></div>
+                    <span class="skill">HTML</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fab fa-css3-alt"></i></div>
+                    <span class="skill">CSS</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fab fa-sass"></i></div>
+                    <span class="skill">SCSS</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fab fa-js-square"></i></div>
+                    <span class="skill">Javascript</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fas fa-code"></i></div>
+                    <span class="skill">JQuery</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fas fa-code"></i></div>
+                    <span class="skill">ES6</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fas fa-chart-pie"></i></div>
+                    <span class="skill">D3</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fab fa-python"></i></div>
+                    <span class="skill">Python</span>
+                </div>
+                <div class="container">
+                    <div class="logo"><i class="fab fa-github"></i></div>
+                    <span class="skill">GitHub</span>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="github">
+            <span class="header">REPOS</span>
+        </section>
+        
+
+        <section class="education">
+            <span class="header">EDUCATION</span>
+            <article class="entry">
+                <h4 class="title">Texas Christian University | Fort Worth, TX</h4>
+                <span class="time">1989-2005</span>
+                <p class="description">B.S. in Journalism</p>
+                <p class="description">B.S. in Criminal Justice</p>
+            </article>
+        </section>
+
+
+        <section class="awards">
+
+            <span class="header">AWARDS</span>
+            
+            <h3 class="location">SOCIETY OF NEWS DESIGN</h3>
+            <p class="award-description">The <a href="https://www.snd.org/about/">Society of News Design</a> is an international organization dedicated to enhancing the field of visual communication.</p>
+            <article class="snd-awards"></article>
+
+            <h3 class="location">PRESS CLUB OF DALLAS</h3>
+            <p class="award-description">The <a href="http://pressclubdallas.com/about/">Press Club of Dallas</a> is a regional organization committed to promoting the fundamental tenets of communications and journalism.</p>
+            <article class="katie-awards"></article>
+            
+            <h3 class="location">TEXAS APME</h3>
+            <p class="award-description">The <a href="http://www.txapme.com/">Texas Associated Press Managing Editor's</a> awards is a state-wide contest to recognize outstanding journalism.</p>
+            <article class="tapme-awards"></article>
+            
+            <h3 class="location">THE DALLAS MORNING NEWS</h3>
+            <article class="entry">
+                <center><h4 class="title">2017 Journalist of the Year</h4></center>
+            </article>
+            
+        </section>
+    </main>
+
+    <footer>
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-github"></i>
+        <i class="fab fa-flickr"></i>
+        <i class="fab fa-twitter"></i>
+    </footer>
+
+</body>
+
+<script type="text/javascript" src="js/scripts.min.js"></script>
