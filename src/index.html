@@ -29,6 +29,22 @@
 <meta name=”twitter:site” content=”@LayneSmith>
 <meta name=”twitter:creator” content=”@LayneSmith>
 
+<script id="portfolio-template" type="text/x-handlebars-template">
+    {{#each this}}
+        <article class="entry">
+            {{#if preview}}
+                <img class="portfolio-piece" data-preview="{{preview}}"  src="images/animations/{{preview}}-poster.gif" alt="Mock up of {{title}} on laptop screen"/>
+            {{/if}}
+            <h4 class="title">{{title}}</h4>
+            <p class="description">{{description}}
+                {{#if link}}
+                    <a href="{{link}}" target="_blank">Link <i class="fas fa-chevron-right"></i></a>
+                {{/if}}
+            </p>
+        </article>
+    {{/each}}
+</script>
+
 <script id="experience-template" type="text/x-handlebars-template">
     {{#each this}}
         <article class="entry">
@@ -53,12 +69,13 @@
             </div>
             {{/if}}
             <h4 class="title">{{title}} - {{time}}</h4>
-            <p class="description">{{description}}</p>
-            <span class="winner">{{winner}}
+            <span class="winner">
+                {{winner}}
                 {{#if link}}
-                    <a href="{{link}}" target="_blank">Link</a>
+                <a href="{{link}}" target="_blank">Link <i class="fas fa-chevron-right"></i></a>
                 {{/if}}
             </span>
+            <p class="description">{{description}}</p>
         </div>
     {{/each}}
 </script>
@@ -70,7 +87,7 @@
     </header>
 
     <main>
-        <section class="experience">
+        <section class="portfolio">
             <span class="header">MY WORK</span>
         </section>
 
