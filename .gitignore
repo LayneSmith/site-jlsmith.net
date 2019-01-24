@@ -3,6 +3,7 @@
 
 src/python/.env
 src/python/.venv
+assets
 
 ### Audio ###
 *.aif
@@ -177,7 +178,7 @@ aws.json
 src/vendor/*
 
 # Transpiled assets
-dist/*
+# dist/*
 
 # Optimized images in src/
 src/images/opt
