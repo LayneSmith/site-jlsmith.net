@@ -49,6 +49,32 @@ section {
         display: block;
         margin: 5px 0px 20px;
     }
+    img {
+        width: 100%;
+    }
+}
+
+section.portfolio {
+    article {
+        margin-bottom: 70px;
+        a {
+            display: inline;
+            font-weight: 700;
+            .fas {
+                font-size: 12px;
+            }
+        }
+        .description {
+            line-height: 27px;
+        }
+        .title {
+            margin: 20px 0px;
+            text-align: center;
+        }
+    }
+    .header {
+        margin-bottom: 30px;
+    }
 }
 
 section.experience {
@@ -66,8 +92,8 @@ section.experience {
             line-height: 27px;
         }
     }
-    
 }
+
 
 section.skills {
     background-color: whitesmoke;
@@ -145,6 +171,11 @@ section.awards {
     }
     .award-description {
         margin-bottom: 50px;
+        a {
+            font-size: inherit;
+            font-weight: normal;
+            margin: 0px;
+        }
     }
     .entry {
         margin-bottom: 50px;
@@ -169,6 +200,13 @@ section.awards {
         font-style: italic;
         font-weight:  200;
     }
+    a {
+        font-style: normal;
+        margin-left: 10px;
+        font-weight: 700;
+        font-size: 14px;
+
+    }
     
 }
 
@@ -184,5 +222,7 @@ footer {
         margin-right: 30px;
         font-size: 24px;
         cursor: pointer;
+        color: whitesmoke;
+    background: none;
     }
 }
