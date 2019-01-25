@@ -15,6 +15,7 @@
         "d3": "^5.7.0",
         "handlebars": "^4.0.12",
         "jquery": "^3.3.1",
+        "scrollmagic": "^2.0.6",
         "selectize": "^0.12.6"
     },
     "devDependencies": {
