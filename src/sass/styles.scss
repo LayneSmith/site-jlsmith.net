@@ -9,8 +9,41 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
-    background-color: whitesmoke;
 }
+
+body {
+    background-color: $background;
+}
+
+.page-container {
+    display: grid;
+
+    nav {
+        position: fixed;
+        top: -40px;
+        width: 100vw;
+        background-color: $dark;
+        height: 40px;
+        padding-left: 10px;
+        padding-top: 3px;
+        overflow: hidden;
+        img {
+            height: 40px;
+            float: left;
+        }
+        .chapter {
+            color: white;
+            font-size: 1em;
+            margin-left: 20px;
+            padding-left: 20px;
+            line-height: 2em;
+            border-left: 1px solid grey;
+
+        }
+    }
+}
+
+
 
 a {
     color: $chartBlue;
@@ -26,7 +59,7 @@ header {
 }
 
 section {
-    padding: 20px;
+    padding: 40px 20px;
     margin-bottom: 50px;
     .location {
         text-align: center;
@@ -56,6 +89,14 @@ section {
 
 section.portfolio {
     article {
+        .piece-container {
+            padding: 40px 0px 30px;
+            background-image: url('../images/grey-back.jpg');
+            background-size: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 87% 81%;
+        }
         margin-bottom: 70px;
         a {
             display: inline;
@@ -65,10 +106,10 @@ section.portfolio {
             }
         }
         .description {
-            line-height: 27px;
+            line-height: 25px;
         }
         .title {
-            margin: 20px 0px;
+            margin: 10px 0px;
             text-align: center;
         }
     }
@@ -96,7 +137,8 @@ section.experience {
 
 
 section.skills {
-    background-color: whitesmoke;
+    background-color: $dark;
+    color: $light;
     padding-bottom: 30px;
     margin-bottom: 0px;
     .logos {
@@ -126,7 +168,8 @@ section.skills {
 }
 
 section.development {
-    background-color: whitesmoke;
+    background-color: $dark;
+    color: $light;
     padding-bottom: 30px;
     .logos {
         display: grid;
@@ -211,7 +254,7 @@ section.awards {
 }
 
 footer {
-    background-color: $chartCopy;
+    background-color: $dark;
     color: whitesmoke;
     padding: 20px;
     text-align: center;
