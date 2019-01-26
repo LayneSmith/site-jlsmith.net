@@ -27,12 +27,16 @@ body {
         padding-left: 10px;
         padding-top: 3px;
         overflow: hidden;
+        font-weight: 200;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        z-index: 5000;
         img {
             height: 40px;
             float: left;
         }
         .chapter {
-            color: white;
+            color: $light;
             font-size: 1em;
             margin-left: 20px;
             padding-left: 20px;
@@ -53,14 +57,39 @@ a {
 header {
     width: 100%;
     margin-bottom: 50px;
+    position: relative;
+    .title {
+        bottom: 9vh;
+        position: absolute;
+        background-color: white;
+        padding: 2rem 2rem 2rem 3rem;
+        width: 58vw;
+        h1 {
+            font-weight: 200;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            margin-bottom: 10px;
+        }
+        p {
+            line-height: 1.5rem;
+        }
+    }
     img {
         width: 100%;
+    }
+    .signature {
+        position: absolute;
+        left: 6vw;
+        top: 3vh;
+        width: 47vw;
+        z-index: 10;
     }
 }
 
 section {
     padding: 40px 20px;
-    margin-bottom: 50px;
+    margin: 0px auto 50px;
+    max-width: 1000px;
     .location {
         text-align: center;
         margin: 20px 0px 10px;
@@ -89,29 +118,36 @@ section {
 
 section.portfolio {
     article {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 70px;
         .piece-container {
             padding: 40px 0px 30px;
             background-image: url('../images/grey-back.jpg');
-            background-size: 80%;
             background-position: center;
             background-repeat: no-repeat;
-            background-size: 87% 81%;
-        }
-        margin-bottom: 70px;
-        a {
-            display: inline;
-            font-weight: 700;
-            .fas {
-                font-size: 12px;
-            }
+            background-size: 87% 100%;
         }
         .description {
-            line-height: 25px;
-        }
-        .title {
-            margin: 10px 0px;
-            text-align: center;
-        }
+
+            .text {
+                line-height: 25px;
+            }
+            .title {
+                margin: 10px 0px;
+                text-align: center;
+            }
+            }
+            a {
+                display: inline;
+                font-weight: 700;
+                .fas {
+                    font-size: 12px;
+                }
+            }
     }
     .header {
         margin-bottom: 30px;
@@ -119,11 +155,14 @@ section.portfolio {
 }
 
 section.experience {
+    margin: 0px auto;
+    max-width: 800px;
     .logo {
         width: 100%;
         text-align: center;
         margin: 30px 0px 40px;
         img {
+            max-width: 20rem;
             width: 70%;
         }
     }
@@ -137,14 +176,15 @@ section.experience {
 
 
 section.skills {
-    background-color: $dark;
-    color: $light;
+    background-color: $light;
+    color: $dark;
     padding-bottom: 30px;
     margin-bottom: 0px;
+    max-width: none;
     .logos {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
         margin-top: 30px;
         .container {
             width: 100%;
@@ -168,14 +208,17 @@ section.skills {
 }
 
 section.development {
-    background-color: $dark;
-    color: $light;
+    background-color: $light;
+    color: $dark;
     padding-bottom: 30px;
+    max-width: none;
+
     .logos {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
         grid-gap: 20px;
         margin-top: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+
         .container {
             width: 100%;
             text-align: center;
@@ -198,6 +241,8 @@ section.development {
 }
 
 section.education {
+    margin: 0px auto;
+    max-width: 800px;
     .entry {
         margin-top: 30px;
         .time {
@@ -207,26 +252,38 @@ section.education {
 }
 
 section.awards {
-    border-bottom: none;
+    margin: 0px auto;
+    max-width: 800px;
     padding-bottom: 0px;
     article {
-        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 20px;
+
     }
     .award-description {
         margin-bottom: 50px;
+        max-width: 90vw;
+        text-align: center;
+        margin: 0px auto 50px;
         a {
             font-size: inherit;
             font-weight: normal;
             margin: 0px;
         }
     }
-    .entry {
-        margin-bottom: 50px;
+    .entry.thumb {
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        grid-gap: 20px;
+    }
+    .entry.no-thumb {
+        text-align: center;
     }
     .thumb-container{
         float: left;
-        width: 55px;
-        height: 55px;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
         margin: 0px 10px 10px 0px;
         overflow: hidden;
@@ -255,7 +312,7 @@ section.awards {
 
 footer {
     background-color: $dark;
-    color: whitesmoke;
+    color: $light;
     padding: 20px;
     text-align: center;
     margin-top: 60px;
@@ -266,6 +323,52 @@ footer {
         font-size: 24px;
         cursor: pointer;
         color: whitesmoke;
-    background: none;
+        background: none;
+    }
+}
+
+
+@media(min-width: 600px) {
+    section.awards .award-description {
+        max-width: 60vw;
+    }
+    section.portfolio {
+        article {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 50px;
+            .description {
+                .title {
+                    text-align: left;
+                    font-size: 1.5rem;
+                }
+                .shoutout {
+                    margin-top: 16px;
+                }
+
+                ul {
+                    list-style-type: none;
+                    a {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media(min-width: 800px) {
+    section.portfolio {
+        article {
+            .title {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media(min-width: 1000px) {
+    section.awards .award-description {
+        max-width: 35vw;
     }
 }
