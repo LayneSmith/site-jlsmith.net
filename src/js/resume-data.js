@@ -7,6 +7,8 @@ const resume = {
       comments: '',
       preview: 'tracker',
       link: 'https://interactives.dallasnews.com/2019/texas-tracker/',
+      tech: ['html', 'scss', 'javascript', 'jQuery'],
+      shoutout: ['@adchavez', '@ArianaNGiorgi',]
     },
     {
       title: 'The Shifting Tide',
@@ -15,6 +17,7 @@ const resume = {
       comments: '',
       preview: 'politics',
       link: 'https://interactives.dallasnews.com/2018/shifting-tide-of-texas-politics',
+      tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'ScrollMagic', 'GSAP'],
     },
     {
       title: 'Texas schools, graded A to F',
@@ -23,6 +26,7 @@ const resume = {
       comments: '',
       preview: 'grades',
       link: 'https://interactives.dallasnews.com/2018/texas-schools-grades/',
+      tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'MapboxGL', 'SQL'],
     },
     {
       title: 'Standoff: How the Dallas SWAT team cornered and killed the July 7 police shooter',
@@ -31,6 +35,8 @@ const resume = {
       comments: '',
       preview: 'standoff',
       link: 'https://interactives.dallasnews.com/2018/standoff/',
+      tech: ['html', 'scss', 'javascript', 'jQuery', 'ScrollMagic', 'GSAP'],
+      shoutout: ['@Hancock_JohnD', '@MichaelHogueDMN '],
     },
     {
       title: 'Visualizing Adrian Beltre’s march to 3,000 hits',
@@ -39,6 +45,7 @@ const resume = {
       comments: '',
       preview: 'beltre',
       link: 'https://interactives.dallasnews.com/2017/beltre-3000-hits/',
+      tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python'],
     },
     {
       title: 'How have the Dallas Mavericks performed in the NBA draft?',
@@ -47,6 +54,7 @@ const resume = {
       comments: '',
       preview: 'mavs',
       link: 'https://interactives.dallasnews.com/2017/mavs-draft/',
+      tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python'],
     },
     {
       title: 'How have the Dallas Cowboys performed in the NFL draft?',
@@ -55,6 +63,7 @@ const resume = {
       comments: '',
       preview: 'cowboys',
       link: 'http://interactives.dallasnews.com/2017/cowboys-draft-data/',
+      tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python'],
     },
     {
       title: 'Behind the numbers: Dak\'s rookie season',
@@ -63,6 +72,7 @@ const resume = {
       comments: '',
       preview: 'dak',
       link: 'http://interactives.dallasnews.com/2017/dak-prescott-rookie-season/',
+      tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python'],
     },
     {
       title: 'The battle for America’s guns',
@@ -71,6 +81,8 @@ const resume = {
       comments: '',
       preview: 'guns',
       link: 'http://interactives.dallasnews.com/2016/gun-fight/index.html',
+      tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python', 'API'],
+
     },
     {
       title: 'Dallas Cowboys Operation Game',
@@ -203,14 +215,14 @@ const resume = {
       logo: 'katie',
       image: 'galveston',
     },
-    {
-      title: 'Katie Award',
-      time: '1999',
-      description: 'Visual Communication Infographic',
-      winner: 'Roaring Rapids Accident',
-      issued: 'Press Club of Dallas',
-      logo: 'katie',
-    },
+    // {
+    //   title: 'Katie Award',
+    //   time: '1999',
+    //   description: 'Visual Communication Infographic',
+    //   winner: 'Roaring Rapids Accident',
+    //   issued: 'Press Club of Dallas',
+    //   logo: 'katie',
+    // },
     {
       title: 'First Place',
       time: '2003',
