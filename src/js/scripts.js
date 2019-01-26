@@ -1,10 +1,15 @@
 import $ from 'jquery';
 import ScrollMagic from 'scrollmagic';
+import { TimelineMax } from 'gsap';
+import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 import Handlebars from 'handlebars';
 import resume from './resume-data';
 
+
+// ////////////////////////////////////////////////////////////////////////////
 // HANDLEBARS
+// ////////////////////////////////////////////////////////////////////////////
 const portfolioSource = document.getElementById('portfolio-template').innerHTML;
 const portfolioTemplate = Handlebars.compile(portfolioSource);
 const portfolioHTML = portfolioTemplate(resume.portfolio);
@@ -30,7 +35,10 @@ const tapmeTemplate = Handlebars.compile(tapmeSource);
 const tapmeHTML = tapmeTemplate(resume.awards.filter(d => d.issued === 'Texas Associated Press Managing Editors'));
 $('.tapme-awards').append(tapmeHTML);
 
+
+// ////////////////////////////////////////////////////////////////////////////
 // CONTROL ANIMATED GIFS ON CLICK AND HOVER
+// ////////////////////////////////////////////////////////////////////////////
 $(document).on('mouseover', '.portfolio-piece', function () {
   const preview = $(this).data('preview');
   $(this).attr('src', `images/animations/${preview}.gif`);
@@ -48,14 +56,15 @@ $(document).on('click', '.portfolio-piece', function () {
   $(this).attr('src', newsrc);
 });
 
+
+// ////////////////////////////////////////////////////////////////////////////
 // SCROLLMAGIC
+// ////////////////////////////////////////////////////////////////////////////
 const controller = new ScrollMagic.Controller();
 
-// PLAY ANIMATION ON ROLL IN AND STOP ON ROLLOUT?
-// ANIMATE PHOTOS IN GALLERY SECTION AS COME INTO VIEW
-
+// DROP NAV
 new ScrollMagic.Scene({
-  triggerElement: '.portfolio', // what will trigger scene
+  triggerElement: '.portfolio', 
   triggerHook: 0,
 })
   .on('leave', () => {
@@ -63,14 +72,12 @@ new ScrollMagic.Scene({
       top: '-=40',
     }, 500, () => {
       $('nav').hide()
-      console.log('Slide up complete');
     });
   })
   .on('enter', () => {
     $('nav').show().animate({
       top: '+=40',
     }, 500, () => {
-      console.log('Slide down complete');
     });
   })
   .addTo(controller);
@@ -97,5 +104,60 @@ $('section').each(function () {
       }
     })
     .addTo(controller);
-  
+});
+
+$(document).ready(function(){
+  console.log('DOM Ready');
+
+
+  // AUTOPLAY THE ANIMATIONS
+  // When you're scrolling dowp, start on enter and stop on leave
+  $('.portfolio-piece').each(function () {
+    console.log($(this).attr('src'));
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.25,
+    })
+    .on('enter leave', (event) => {
+      const direction = event.scrollDirection;
+      const thisImg = $(this).data('preview');
+      if (direction === 'FORWARD') {
+        $(this).attr('src', `images/animations/${thisImg}-poster.gif`);
+      } else {
+        $(this).attr('src', `images/animations/${thisImg}.gif`);
+      }      
+    })
+    .addTo(controller);
+  });
+
+  // When you're scrolling up, start on enter, stop on leave
+  $('.portfolio-piece').each(function () {
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.75,
+    })
+    .on('enter leave', (event) => {
+      const direction = event.scrollDirection;
+      const thisImg = $(this).data('preview');
+      if (direction === 'REVERSE') {
+        $(this).attr('src', `images/animations/${thisImg}-poster.gif`);
+      } else {
+        $(this).attr('src', `images/animations/${thisImg}.gif`);
+      }      
+    })
+    .addTo(controller);
+  });
+
+  // Add appear effect when scrolling in
+  $('.portfolio article').each(function () {
+    const tl = new TimelineMax().add([
+      TweenMax.from($(this), 1, { y: 50, autoAlpha: 0, ease: Power1.easeOut })
+    ]);
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.8,
+    })
+    .setTween(tl)
+    .addTo(controller);
+  });
 });
