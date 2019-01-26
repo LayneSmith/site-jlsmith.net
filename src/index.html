@@ -37,18 +37,28 @@
                     <img class="portfolio-piece" data-preview="{{preview}}"  src="images/animations/{{preview}}-poster.gif" alt="Mock up of {{title}} on laptop screen"/>
                 </div>        
             {{/if}}
-            <h4 class="title">{{title}}</h4>
-            <p class="description">{{description}}
-                {{#if link}}
-                    <a href="{{link}}" target="_blank">Link <i class="fas fa-chevron-right"></i></a>
-                {{/if}}
-            </p>
+            <div class="description">
+                <h4 class="title">{{title}}</h4>
+                <p class="text">{{description}}
+                    {{#if link}}
+                        <a href="{{link}}" target="_blank">Link <i class="fas fa-chevron-right"></i></a>
+                    {{/if}}
+                </p>
+            </div>
         </article>
     {{/each}}
 </script>
 
 <script id="experience-template" type="text/x-handlebars-template">
-    {{#each this}}
+    {{#each this}}{{!--
+                {{#if shoutout}}
+                    <p class="text shoutout">With the assist:</p>
+                    <ul> 
+                        {{#each shoutout}}
+                            <li><a href="https://twitter.com/{{this}}">{{this}}</a></li>
+                        {{/each}}
+                {{/if}}
+                --}}
         <article class="entry">
             <h4 class="title">{{title}}</h4>
             <span class="time">{{time}}</span>
@@ -64,20 +74,26 @@
 
 <script id="award-template" type="text/x-handlebars-template">
     {{#each this}}
-        <div class="entry">
+        {{#if image}}
+            <div class="entry thumb">
+        {{else}}
+            <div class="entry no-thumb">
+        {{/if}}
             {{#if image}}
             <div class="thumb-container">
                 <img class="award-thumb" src="images/award-thumbs/{{image}}.jpg" alt="{{winner}}" />
             </div>
             {{/if}}
-            <h4 class="title">{{title}} - {{time}}</h4>
-            <span class="winner">
-                {{winner}}
-                {{#if link}}
-                <a href="{{link}}" target="_blank">Link <i class="fas fa-chevron-right"></i></a>
-                {{/if}}
-            </span>
-            <p class="description">{{description}}</p>
+            <div class="description">
+                <h4 class="title">{{title}} - {{time}}</h4>
+                <span class="winner">
+                    {{winner}}
+                    {{#if link}}
+                    <a href="{{link}}" target="_blank">Link <i class="fas fa-chevron-right"></i></a>
+                    {{/if}}
+                </span>
+                <p class="text">{{description}}</p>
+            </div>
         </div>
     {{/each}}
 </script>
@@ -87,11 +103,12 @@
     <div class="page-container">
 
         <nav>
-            <img src="images/small-signature.svg" alt="Layne signature">
+            <img src="images/small-signature.svg" alt="Layne signature for nav">
             <span class="chapter">My work</span>
         </nav>
         
         <header>
+            <img class="signature" src="images/large-signature.svg" alt="Layne signature for hero">
             <img srcset="images/computer-400.jpg 400w,
                         images/computer-800.jpg 800w,
                         images/computer-1600.jpg 1600w,
@@ -101,7 +118,11 @@
                         1600px" 
                 src="images/computer-3200.jpg"
                 class="hero"
-                alt="Layne Smith's kitchen table when he's working on webdev.">
+                alt="Stock photo of a computer">
+            <div class="title">
+                <h1>Interactive designer</h1>
+                <p>Creating inspired visual story-telling experiences meant to help users understand.</p>
+            </div>
         </header>
 
         <main>
@@ -120,40 +141,32 @@
                 <span class="header">SKILLS</span>
                 <div class="logos">
                     <div class="container">
-                        <div class="logo"><i class="fab fa-html5"></i></div>
+                        <div class="logo"><i class="far fa-eye"></i></div>
                         <span class="skill">Visual communication</span>
                     </div>
                     <div class="container">
-                        <div class="logo"><i class="fab fa-css3-alt"></i></div>
+                        <div class="logo"><i class="fas fa-arrows-alt-h"></i></div>
                         <span class="skill">Interaction design</span>
                     </div>
                     <div class="container">
-                        <div class="logo"><i class="fab fa-sass"></i></div>
+                        <div class="logo"><i class="far fa-object-group"></i></div>
                         <span class="skill">Visual design</span>
                     </div>
                     <div class="container">
-                        <div class="logo"><i class="fab fa-js-square"></i></div>
+                        <div class="logo"><i class="fas fa-chart-area"></i></div>
                         <span class="skill">Data visualization</span>
                     </div>
                     <div class="container">
-                        <div class="logo"><i class="fas fa-code"></i></div>
+                        <div class="logo"><i class="fas fa-sitemap"></i></div>
                         <span class="skill">Project management</span>
                     </div>
                     <div class="container">
-                        <div class="logo"><i class="fas fa-code"></i></div>
+                        <div class="logo"><i class="fas fa-bullhorn"></i></div>
                         <span class="skill">Public speaking</span>
                     </div>
                     <div class="container">
-                        <div class="logo"><i class="fas fa-chart-pie"></i></div>
+                        <div class="logo"><i class="fas fa-chalkboard"></i></div>
                         <span class="skill">Teaching</span>
-                    </div>
-                    <div class="container">
-                        <div class="logo"><i class="fab fa-python"></i></div>
-                        <span class="skill">Python</span>
-                    </div>
-                    <div class="container">
-                        <div class="logo"><i class="fab fa-github"></i></div>
-                        <span class="skill">GitHub</span>
                     </div>
                 </div>
             </section>
@@ -161,6 +174,14 @@
             <section class="development" data-chapter="Development tools">
                 <span class="header">DEVELOPMENT</span>
                 <div class="logos">
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-adobe"></i></div>
+                        <span class="skill">Photoshop</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-adobe"></i></div>
+                        <span class="skill">Illustrator</span>
+                    </div>
                     <div class="container">
                         <div class="logo"><i class="fab fa-html5"></i></div>
                         <span class="skill">HTML</span>
