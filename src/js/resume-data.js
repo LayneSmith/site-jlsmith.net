@@ -6,9 +6,12 @@ const resume = {
       date: '1/8/2019',
       comments: '',
       preview: 'tracker',
+      type: 'web',
+      web: true,
       link: 'https://interactives.dallasnews.com/2019/texas-tracker/',
       tech: ['html', 'scss', 'javascript', 'jQuery'],
-      shoutout: ['@adchavez', '@ArianaNGiorgi',]
+      shoutout: ['@adchavez', '@ArianaNGiorgi',],
+      summary: 'Stylized, interactive front end married to an in-house Django API that allows users to customize their experience.'
     },
     {
       title: 'The Shifting Tide',
@@ -16,8 +19,12 @@ const resume = {
       date: '11/15/2018',
       comments: '',
       preview: 'politics',
+      type: 'web',
+      web: true,
       link: 'https://interactives.dallasnews.com/2018/shifting-tide-of-texas-politics',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'ScrollMagic', 'GSAP'],
+      summary: 'In-depth data analysis converted into a user experience that helps tell a very comlicated story.'
+
     },
     {
       title: 'Texas schools, graded A to F',
@@ -25,8 +32,12 @@ const resume = {
       date: '9/20/2018',
       comments: '',
       preview: 'grades',
+      type: 'web',
+      web: true,
       link: 'https://interactives.dallasnews.com/2018/texas-schools-grades/',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'MapboxGL', 'SQL'],
+      summary: 'Big data analysis and visualization customized to each user\'s input.'
+
     },
     {
       title: 'Standoff: How the Dallas SWAT team cornered and killed the July 7 police shooter',
@@ -34,9 +45,13 @@ const resume = {
       date: '2/2/2018',
       comments: '',
       preview: 'standoff',
+      type: 'web',
+      web: true,
       link: 'https://interactives.dallasnews.com/2018/standoff/',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'ScrollMagic', 'GSAP'],
       shoutout: ['@Hancock_JohnD', '@MichaelHogueDMN '],
+      summary: 'A complex narrative incorporating riveting content, strong design and animations to take usersa on a journey through a tragic event.'
+
     },
     {
       title: 'Visualizing Adrian Beltre’s march to 3,000 hits',
@@ -44,8 +59,12 @@ const resume = {
       date: '7/30/2017',
       comments: '',
       preview: 'beltre',
+      type: 'web',
+      web: true,
       link: 'https://interactives.dallasnews.com/2017/beltre-3000-hits/',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python'],
+      summary: 'Design and data visualization that combines low-level data with high-level ideas to tell a story.'
+
     },
     {
       title: 'How have the Dallas Mavericks performed in the NBA draft?',
@@ -53,8 +72,12 @@ const resume = {
       date: '6/21/2017',
       comments: '',
       preview: 'mavs',
+      type: 'web',
+      web: true,
       link: 'https://interactives.dallasnews.com/2017/mavs-draft/',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python'],
+      summary: 'Design and data visualization that combines data points with visualization tools and allows users to engage with the datapoints they care about.'
+
     },
     {
       title: 'How have the Dallas Cowboys performed in the NFL draft?',
@@ -62,8 +85,12 @@ const resume = {
       date: '4/24/2017',
       comments: '',
       preview: 'cowboys',
+      type: 'web',
+      web: true,
       link: 'http://interactives.dallasnews.com/2017/cowboys-draft-data/',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python'],
+      summary: 'Data visualization that allows users to clearly see the relationship between hundreds of individual datapoints.'
+
     },
     {
       title: 'Behind the numbers: Dak\'s rookie season',
@@ -71,8 +98,12 @@ const resume = {
       date: '2/3/2017',
       comments: '',
       preview: 'dak',
+      type: 'web',
+      web: true,
       link: 'http://interactives.dallasnews.com/2017/dak-prescott-rookie-season/',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python'],
+      summary: 'Numbers oriented data visualization helping users to formulate a conclusion.'
+
     },
     {
       title: 'The battle for America’s guns',
@@ -80,9 +111,11 @@ const resume = {
       date: '11/18/2016',
       comments: '',
       preview: 'guns',
+      type: 'web',
+      web: true,
       link: 'http://interactives.dallasnews.com/2016/gun-fight/index.html',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python', 'API'],
-
+      summary: 'A user experience that, using data visualization and design, helps to illustrate a controversial issue.'
     },
     {
       title: 'Dallas Cowboys Operation Game',
@@ -90,7 +123,42 @@ const resume = {
       date: '9/8/2016',
       comments: '',
       preview: 'operation',
+      type: 'web',
+      web: true,
       link: 'http://interactives.dallasnews.com/2016/dallas-cowboys-operation/',
+      summary: 'A fun interactive game because, who doesn\'t love Operation?!'
+    },
+    {
+      title: 'NASCAR Haulers',
+      description: 'When NASCAR comes to town, there\'s more to pack than just suitcases.',
+      date: '2005',
+      type: 'print',
+      print: true,
+      preview: 'haulers.jpg',
+    },
+    {
+      title: 'Inspired Vision',
+      description: 'Dallas cathedral’s bell tower will complete architect’s dream.',
+      date: '2/26/2005',
+      type: 'print',
+      print: true,
+      preview: 'cathedral.jpg',
+    },
+    {
+      title: 'Surgeon’s Big Challenge',
+      description: 'Doctors believe extensive study and planning, plus special equipment, will improve odds of success.',
+      date: '2004',
+      type: 'print',
+      print: true,
+      preview: 'twins.jpg',
+    },
+    {
+      title: 'Urban Beauty',
+      description: 'An early look at the Nasher Sculpture Garden in Dallas, TX.',
+      date: '2003',
+      type: 'print',
+      print: true,
+      preview: 'nasher.jpg',
     },
   ],
   experience: [

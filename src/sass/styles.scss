@@ -17,13 +17,14 @@ body {
 
 .page-container {
     display: grid;
+    width: 100%;
 
     nav {
         position: fixed;
         top: -40px;
-        width: 100vw;
-        background-color: $dark;
+        width: 100%;
         height: 40px;
+        background-color: $dark;
         padding-left: 10px;
         padding-top: 3px;
         overflow: hidden;
@@ -56,14 +57,10 @@ a {
 
 header {
     width: 100%;
-    margin-bottom: 50px;
     position: relative;
     .title {
-        bottom: 9vh;
-        position: absolute;
-        background-color: white;
-        padding: 2rem 2rem 2rem 3rem;
-        width: 58vw;
+        padding: 2rem;
+        width: 100%;
         h1 {
             font-weight: 200;
             text-transform: uppercase;
@@ -75,13 +72,14 @@ header {
         }
     }
     img {
-        width: 100%;
+        width: 160%;
+        margin-left: -224px;
     }
     .signature {
         position: absolute;
-        left: 6vw;
-        top: 3vh;
-        width: 47vw;
+        right: 27vw;
+        top: 18vh;
+        width: 68vw;
         z-index: 10;
     }
 }
@@ -89,6 +87,7 @@ header {
 section {
     padding: 40px 20px;
     margin: 0px auto 50px;
+    width: 100%;
     max-width: 1000px;
     .location {
         text-align: center;
@@ -327,8 +326,34 @@ footer {
     }
 }
 
+@media(min-width: 400px) {
+    header {
+        .title {
+            padding-top: 70px;
+        }
+        .signature {
+            right: 38vw;
+            top: 23vh;
+            width: 59vw;
+        }
+    }
+}
+
+
 
 @media(min-width: 600px) {
+    header {
+        .title {
+            position: absolute;
+            bottom: 3rem;
+            width: 76%;
+        }
+        .signature {
+            right: 39vw;
+            top: 17vh;
+            width: 57vw;
+        }
+    }
     section.awards .award-description {
         max-width: 60vw;
     }
@@ -354,7 +379,28 @@ footer {
             }
         }
     }
+}
 
+@media(min-width: 700px) {
+    header {
+        img {
+            width: 100%;
+            margin: 0px;
+        }
+        .signature {
+            right: 45vw;
+            top: 6vh;
+            width: 51vw;
+        }
+        .title {
+            position: absolute;
+            bottom: 1rem;
+            width: 68%;
+            h1 {
+                font-size: 1.7rem;
+            }
+        }
+    }
 }
 
 @media(min-width: 800px) {
@@ -362,13 +408,63 @@ footer {
         article {
             .title {
                 font-size: 1.8rem;
+                bottom: 1.8rem;
+                width: 63%;
+            }
+        }
+    }
+}
+
+@media(min-width: 900px) {
+    header {
+        .title {
+            left: 2rem;
+        }
+    }
+    section.portfolio {
+        article {
+            .title {
+                font-size: 1.8rem;
+                bottom: 1.8rem;
+                width: 63%;
             }
         }
     }
 }
 
 @media(min-width: 1000px) {
+    header {
+        .title {
+            width: 47%;
+            bottom: 9rem;
+            left: 3rem;        }
+    }
     section.awards .award-description {
         max-width: 35vw;
     }
+}
+
+@media(min-width: 1300px) {
+    header {
+        .title {
+            width: 75%;
+            bottom: 12rem;
+            h1 {
+                font-size: 2.1rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    
+}
+
+@media(min-width: 1500px) {
+    header {
+        .title {
+            bottom: 18rem;
+        }
+    }
+    
 }

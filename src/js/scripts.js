@@ -112,7 +112,7 @@ $(document).ready(function(){
 
   // AUTOPLAY THE ANIMATIONS
   // When you're scrolling dowp, start on enter and stop on leave
-  $('.portfolio-piece').each(function () {
+  $('article.web').each(function () {
     console.log($(this).attr('src'));
     new ScrollMagic.Scene({
       triggerElement: this,
@@ -131,7 +131,7 @@ $(document).ready(function(){
   });
 
   // When you're scrolling up, start on enter, stop on leave
-  $('.portfolio-piece').each(function () {
+  $('article.web').each(function () {
     new ScrollMagic.Scene({
       triggerElement: this,
       triggerHook: 0.75,

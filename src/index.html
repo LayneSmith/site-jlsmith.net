@@ -31,10 +31,14 @@
 
 <script id="portfolio-template" type="text/x-handlebars-template">
     {{#each this}}
-        <article class="entry">
+        <article class="entry {{type}}">
             {{#if preview}}
                 <div class="piece-container">
-                    <img class="portfolio-piece" data-preview="{{preview}}"  src="images/animations/{{preview}}-poster.gif" alt="Mock up of {{title}} on laptop screen"/>
+                    {{#if web}}
+                        <img class="portfolio-piece" data-preview="{{preview}}"  src="images/animations/{{preview}}-poster.gif" alt="Mock up of {{title}} on laptop screen"/>
+                    {{else}}
+                        <img class="portfolio-piece" data-preview="{{preview}}"  src="images/{{preview}}" alt="Infographic of {{title}}"/>
+                    {{/if}}
                 </div>        
             {{/if}}
             <div class="description">
