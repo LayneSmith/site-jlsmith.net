@@ -40,7 +40,7 @@ const resume = {
 
     },
     {
-      title: 'Standoff: How the Dallas SWAT team cornered and killed the July 7 police shooter',
+      title: 'Standoff',
       description: 'This is the first full account of what happened inside El Centro College in the darkness and chaos of July 7, 2016.',
       date: '2/2/2018',
       comments: '',
@@ -160,6 +160,14 @@ const resume = {
       print: true,
       preview: 'nasher.jpg',
     },
+    {
+      title: 'The Gulf Between the Wars',
+      description: 'It’s been 12 years since Desert Storm. While the names and places may be the same, the difference can be ofund on the weapons-technology front.',
+      date: '2003',
+      type: 'print',
+      print: true,
+      preview: 'gulf.jpg',
+    },
   ],
   experience: [
     {
@@ -229,10 +237,10 @@ const resume = {
       link: 'http://res.dallasnews.com/graphics/2014_03/finalfork/',
     },
     {
-      title: 'Award of Excellence (2)',
+      title: 'Award of Excellence',
       time: '2012',
       description: 'Features, Use of Multimedia',
-      winner: 'Lost Dallas',
+      winner: 'Lost Dallas (iPad exclusive)',
       issued: 'Society of News Design',
       logo: 'snd',
       image: 'lostdallas',
