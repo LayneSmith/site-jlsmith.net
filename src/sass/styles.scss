@@ -1,9 +1,12 @@
 // Imports
-@import 'variables';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,400,700');
 
+// Variables
+$chartBlue: #2b81be;
+$dark: black;
+$light: #e8e7f0;
 
+// Styles
 * {
     margin: 0px;
     padding: 0px;
@@ -16,8 +19,12 @@ body {
 }
 
 .page-container {
-    display: grid;
     width: 100%;
+
+    a {
+        color: $chartBlue;
+        text-decoration: none;
+    }
 
     nav {
         position: fixed;
@@ -32,10 +39,12 @@ body {
         letter-spacing: 5px;
         text-transform: uppercase;
         z-index: 5000;
+        
         img {
             height: 40px;
             float: left;
         }
+        
         .chapter {
             color: $light;
             font-size: 1em;
@@ -46,57 +55,75 @@ body {
 
         }
     }
-}
 
-
-
-a {
-    color: $chartBlue;
-    text-decoration: none;
-}
-
-header {
-    width: 100%;
-    position: relative;
-    .title {
-        padding: 2rem;
+    header {
         width: 100%;
-        h1 {
-            font-weight: 200;
-            text-transform: uppercase;
-            letter-spacing: 0.3rem;
-            margin-bottom: 10px;
+        position: relative;
+        
+        .title {
+            padding: 2rem;
+            width: 100%;
+            
+            h1 {
+                font-weight: 200;
+                text-transform: uppercase;
+                letter-spacing: 0.3rem;
+                margin-bottom: 10px;
+            }
+            
+            p {
+                line-height: 1.5rem;
+            }
         }
-        p {
-            line-height: 1.5rem;
+        
+        img {
+            width: 160%;
+            margin-left: -224px;
+        }
+        
+        .signature {
+            position: absolute;
+            right: 27vw;
+            bottom: 11rem;
+            width: 68vw;
+            z-index: 10;
         }
     }
-    img {
-        width: 160%;
-        margin-left: -224px;
-    }
-    .signature {
-        position: absolute;
-        right: 27vw;
-        top: 18vh;
-        width: 68vw;
-        z-index: 10;
+
+    footer {
+        background-color: $dark;
+        color: $light;
+        padding: 20px;
+        text-align: center;
+        margin-top: 60px;
+
+        .fab {
+            display: inline;
+            margin-right: 30px;
+            font-size: 24px;
+            cursor: pointer;
+            color: whitesmoke;
+            background: none;
+        }
     }
 }
 
 section {
-    padding: 40px 20px;
+    padding: 50px 20px;
     margin: 0px auto 50px;
     width: 100%;
     max-width: 1000px;
+    
     .location {
         text-align: center;
         margin: 20px 0px 10px;
         font-weight: 400;
     }
+    
     div.entry {
         margin-top: 20px;
     }
+    
     .header {
         text-align: center;
         width: 100%;
@@ -104,18 +131,22 @@ section {
         font-weight: 200;
         letter-spacing: 5px;
         font-size: 20px;
+        margin-bottom: 50px;
     }
+    
     .time {
         font-weight: 200;
         display: block;
         margin: 5px 0px 20px;
     }
+    
     img {
         width: 100%;
     }
 }
 
 section.portfolio {
+    
     article {
         display: grid;
         grid-template-columns: 1fr;
@@ -123,6 +154,7 @@ section.portfolio {
         justify-items: center;
         align-items: center;
         margin-bottom: 70px;
+        
         .piece-container {
             padding: 40px 0px 30px;
             background-image: url('../images/grey-back.jpg');
@@ -130,43 +162,50 @@ section.portfolio {
             background-repeat: no-repeat;
             background-size: 87% 100%;
         }
+        
         .description {
 
             .text {
                 line-height: 25px;
             }
+            
             .title {
                 margin: 10px 0px;
                 text-align: center;
+                width: 100%;
             }
-            }
+            
             a {
                 display: inline;
+                white-space: nowrap;
                 font-weight: 700;
+                
                 .fas {
                     font-size: 12px;
                 }
             }
-    }
-    .header {
-        margin-bottom: 30px;
+        }
     }
 }
 
 section.experience {
     margin: 0px auto;
     max-width: 800px;
+    
     .logo {
         width: 100%;
         text-align: center;
         margin: 30px 0px 40px;
+        
         img {
             max-width: 20rem;
-            width: 70%;
+            width: 40%;
         }
     }
+    
     article {
         margin-bottom: 50px;
+        
         .description {
             line-height: 27px;
         }
@@ -180,14 +219,17 @@ section.skills {
     padding-bottom: 30px;
     margin-bottom: 0px;
     max-width: none;
+    
     .logos {
         display: grid;
         grid-gap: 20px;
         grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
         margin-top: 30px;
+        
         .container {
             width: 100%;
             text-align: center;
+            
             .logo {
                 display: inline-block;
                 width: 55px;
@@ -199,6 +241,7 @@ section.skills {
                 border-radius: 50%;
                 margin-bottom: 5px;
             }
+            
             .skill {
                 display: block;
             }
@@ -221,6 +264,7 @@ section.development {
         .container {
             width: 100%;
             text-align: center;
+            
             .logo {
                 display: inline-block;
                 width: 55px;
@@ -232,6 +276,7 @@ section.development {
                 border-radius: 50%;
                 margin-bottom: 5px;
             }
+            
             .skill {
                 display: block;
             }
@@ -242,8 +287,10 @@ section.development {
 section.education {
     margin: 0px auto;
     max-width: 800px;
+    
     .entry {
         margin-top: 30px;
+        
         .time {
             margin-bottom: 7px;
         }
@@ -254,31 +301,39 @@ section.awards {
     margin: 0px auto;
     max-width: 800px;
     padding-bottom: 0px;
+    
     article {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-gap: 20px;
 
     }
+    
     .award-description {
         margin-bottom: 50px;
         max-width: 90vw;
         text-align: center;
         margin: 0px auto 50px;
+        
         a {
             font-size: inherit;
             font-weight: normal;
             margin: 0px;
+            white-space: normal;
+            display: inline;
         }
     }
+    
     .entry.thumb {
         display: grid;
         grid-template-columns: 70px 1fr;
         grid-gap: 20px;
     }
+    
     .entry.no-thumb {
         text-align: center;
     }
+    
     .thumb-container{
         float: left;
         width: 70px;
@@ -291,90 +346,76 @@ section.awards {
             width: 100%;
         }
     }
+    
     .location {
         margin-top: 60px;
         margin-bottom: 5px;
     }
+    
     .winner {
         font-style: italic;
         font-weight:  200;
     }
+    
     a {
+        display: block;
+        white-space: nowrap;
         font-style: normal;
-        margin-left: 10px;
         font-weight: 700;
         font-size: 14px;
 
     }
-    
-}
-
-footer {
-    background-color: $dark;
-    color: $light;
-    padding: 20px;
-    text-align: center;
-    margin-top: 60px;
-
-    .fab {
-        display: inline;
-        margin-right: 30px;
-        font-size: 24px;
-        cursor: pointer;
-        color: whitesmoke;
-        background: none;
-    }
 }
 
 @media(min-width: 400px) {
+    
     header {
+    
         .title {
             padding-top: 70px;
         }
+    
         .signature {
-            right: 38vw;
-            top: 23vh;
-            width: 59vw;
+            right: 24vw;
+            bottom: 13rem;
+            width: 71vw;
         }
     }
 }
 
-
-
 @media(min-width: 600px) {
+    
     header {
+    
         .title {
             position: absolute;
             bottom: 3rem;
             width: 76%;
         }
+    
         .signature {
             right: 39vw;
             top: 17vh;
             width: 57vw;
         }
     }
+    
     section.awards .award-description {
         max-width: 60vw;
     }
+    
     section.portfolio {
+    
         article {
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 50px;
+    
             .description {
+    
                 .title {
                     text-align: left;
                     font-size: 1.5rem;
-                }
-                .shoutout {
-                    margin-top: 16px;
-                }
-
-                ul {
-                    list-style-type: none;
-                    a {
-                        font-size: 13px;
-                    }
+                    width: 100%;
                 }
             }
         }
@@ -382,20 +423,24 @@ footer {
 }
 
 @media(min-width: 700px) {
+    
     header {
+    
         img {
             width: 100%;
             margin: 0px;
         }
+    
         .signature {
             right: 45vw;
             top: 6vh;
             width: 51vw;
         }
+    
         .title {
             position: absolute;
             bottom: 1rem;
-            width: 68%;
+    
             h1 {
                 font-size: 1.7rem;
             }
@@ -404,54 +449,66 @@ footer {
 }
 
 @media(min-width: 800px) {
+    
     section.portfolio {
+    
         article {
+    
             .title {
                 font-size: 1.8rem;
                 bottom: 1.8rem;
-                width: 63%;
             }
         }
     }
 }
 
 @media(min-width: 900px) {
+    
     header {
+    
         .title {
             left: 2rem;
         }
     }
+    
     section.portfolio {
+    
         article {
+    
             .title {
                 font-size: 1.8rem;
                 bottom: 1.8rem;
-                width: 63%;
             }
         }
     }
 }
 
 @media(min-width: 1000px) {
+    
     header {
+    
         .title {
             width: 47%;
             bottom: 9rem;
             left: 3rem;        }
     }
+    
     section.awards .award-description {
         max-width: 35vw;
     }
 }
 
 @media(min-width: 1300px) {
+    
     header {
+    
         .title {
-            width: 75%;
             bottom: 12rem;
+    
             h1 {
                 font-size: 2.1rem;
             }
+    
             p {
                 font-size: 1.2rem;
             }
@@ -461,7 +518,9 @@ footer {
 }
 
 @media(min-width: 1500px) {
+    
     header {
+    
         .title {
             bottom: 18rem;
         }
