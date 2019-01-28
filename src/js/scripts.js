@@ -39,17 +39,17 @@ $('.tapme-awards').append(tapmeHTML);
 // ////////////////////////////////////////////////////////////////////////////
 // CONTROL ANIMATED GIFS ON CLICK AND HOVER
 // ////////////////////////////////////////////////////////////////////////////
-$(document).on('mouseover', '.portfolio-piece', function () {
+$(document).on('mouseover', '.entry.web .portfolio-piece', function () {
   const preview = $(this).data('preview');
   $(this).attr('src', `images/animations/${preview}.gif`);
 });
 
-$(document).on('mouseout', '.portfolio-piece', function () {
+$(document).on('mouseout', '.entry.web .portfolio-piece', function () {
   const preview = $(this).data('preview');
   $(this).attr('src', `images/animations/${preview}-poster.gif`);
 });
 
-$(document).on('click', '.portfolio-piece', function () {
+$(document).on('click', '.entry.web .portfolio-piece', function () {
   const preview = $(this).data('preview');
   const oldSrc = $(this).attr('src');
   const newsrc = (oldSrc.includes('-poster')) ? `images/animations/${preview}.gif` : `images/animations/${preview}-poster.gif`;
@@ -107,13 +107,10 @@ $('section').each(function () {
 });
 
 $(document).ready(function(){
-  console.log('DOM Ready');
-
 
   // AUTOPLAY THE ANIMATIONS
   // When you're scrolling dowp, start on enter and stop on leave
-  $('article.web').each(function () {
-    console.log($(this).attr('src'));
+  $('.entry.web img').each(function () {
     new ScrollMagic.Scene({
       triggerElement: this,
       triggerHook: 0.25,
@@ -131,7 +128,7 @@ $(document).ready(function(){
   });
 
   // When you're scrolling up, start on enter, stop on leave
-  $('article.web').each(function () {
+  $('.entry.web img').each(function () {
     new ScrollMagic.Scene({
       triggerElement: this,
       triggerHook: 0.75,
