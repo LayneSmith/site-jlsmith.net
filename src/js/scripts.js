@@ -2,7 +2,7 @@ import $ from 'jquery';
 import ScrollMagic from 'scrollmagic';
 import { TimelineMax } from 'gsap';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
-import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
+// import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 import Handlebars from 'handlebars';
 import resume from './resume-data';
 
@@ -55,7 +55,6 @@ $(document).on('click', '.entry.web .portfolio-piece', function () {
   const newsrc = (oldSrc.includes('-poster')) ? `images/animations/${preview}.gif` : `images/animations/${preview}-poster.gif`;
   $(this).attr('src', newsrc);
 });
-
 
 // ////////////////////////////////////////////////////////////////////////////
 // SCROLLMAGIC
@@ -157,4 +156,39 @@ $(document).ready(function(){
     .setTween(tl)
     .addTo(controller);
   });
+
+  // Animate the signature
+
+  const tl = new TimelineMax();
+
+  const l = document.getElementById('l');
+  const a = document.getElementById('a');
+  const y = document.getElementById('y');
+  const n = document.getElementById('n');
+  const e = document.getElementById('e');
+  
+  const l_Length = l.getTotalLength();
+  const a_Length = a.getTotalLength();
+  const y_Length = y.getTotalLength();
+  const n_Length = n.getTotalLength();
+  const e_Length = e.getTotalLength();
+
+  $('.signature').show();
+  
+  tl.set(l, { strokeDasharray: l_Length })
+  tl.set(a, { strokeDasharray: a_Length })
+  tl.set(y, { strokeDasharray: y_Length })
+  tl.set(n, { strokeDasharray: n_Length })
+  tl.set(e, { strokeDasharray: e_Length })
+  tl.set(l, { strokeWidth: 16 })
+  tl.fromTo(l, 0.4, { strokeDashoffset: l_Length }, { strokeDashoffset: 0 })
+  tl.set(a, { strokeWidth: 16 })
+  tl.fromTo(a, 0.4, { strokeDashoffset: a_Length }, { strokeDashoffset: 0 })
+  tl.set(y, { strokeWidth: 16 })
+  tl.fromTo(y, 0.4, { strokeDashoffset: y_Length }, { strokeDashoffset: 0 })
+  tl.set(n, { strokeWidth: 16 })
+  tl.fromTo(n, 0.4, { strokeDashoffset: n_Length }, { strokeDashoffset: 0 })
+  tl.set(e, { strokeWidth: 16 })
+  tl.fromTo(e, 0.4, { strokeDashoffset: e_Length }, { strokeDashoffset: 0 })
+
 });
