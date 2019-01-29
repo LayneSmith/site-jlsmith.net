@@ -7,10 +7,11 @@ const resume = {
       comments: '',
       preview: 'tracker',
       type: 'web',
+      paywall: true,
       web: true,
       link: 'https://interactives.dallasnews.com/2019/texas-tracker/',
       tech: ['html', 'scss', 'javascript', 'jQuery'],
-      shoutout: ['@adchavez', '@ArianaNGiorgi',],
+      shoutouts: ['@adchavez', '@ArianaNGiorgi',],
       summary: 'Stylized, interactive front end married to an in-house Django API that allows users to customize their experience.'
     },
     {
@@ -21,20 +22,20 @@ const resume = {
       preview: 'politics',
       type: 'web',
       web: true,
-      link: 'https://interactives.dallasnews.com/2018/shifting-tide-of-texas-politics',
+      link: 'http://www.jlsmith.net/interactives/election/',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'ScrollMagic', 'GSAP'],
       summary: 'In-depth data analysis converted into a user experience that helps tell a very comlicated story.'
 
     },
     {
       title: 'Texas schools, graded A to F',
-      description: 'This school year is the first time the Texas Education Agency has issued grades to school districts in an A-F system based on how well they\'re educating kids.',
+      description: '2018 was the first year the Texas Education Agency has issued grades to school districts in an A-F system based on how well they\'re educating kids.',
       date: '9/20/2018',
       comments: '',
       preview: 'grades',
       type: 'web',
       web: true,
-      link: 'https://interactives.dallasnews.com/2018/texas-schools-grades/',
+      link: 'http://www.jlsmith.net/interactives/schools/',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'MapboxGL', 'SQL'],
       summary: 'Big data analysis and visualization customized to each user\'s input.'
 
@@ -47,21 +48,21 @@ const resume = {
       preview: 'standoff',
       type: 'web',
       web: true,
-      link: 'https://interactives.dallasnews.com/2018/standoff/',
+      link: 'http://www.jlsmith.net/interactives/standoff/',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'ScrollMagic', 'GSAP'],
-      shoutout: ['@Hancock_JohnD', '@MichaelHogueDMN '],
+      shoutouts: ['@Hancock_JohnD', '@MichaelHogueDMN', '@SmileyPool'],
       summary: 'A complex narrative incorporating riveting content, strong design and animations to take usersa on a journey through a tragic event.'
 
     },
     {
       title: 'Visualizing Adrian Beltre’s march to 3,000 hits',
-      description: 'Check out a complete visualization of Adrian Beltre\'s march to 3, 000 hits',
+      description: 'Check out a complete visualization of Adrian Beltre\'s march to 3,000 hits.',
       date: '7/30/2017',
       comments: '',
       preview: 'beltre',
       type: 'web',
       web: true,
-      link: 'https://interactives.dallasnews.com/2017/beltre-3000-hits/',
+      link: 'http://www.jlsmith.net/interactives/beltre/',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python'],
       summary: 'Design and data visualization that combines low-level data with high-level ideas to tell a story.'
 
@@ -74,33 +75,33 @@ const resume = {
       preview: 'mavs',
       type: 'web',
       web: true,
-      link: 'https://interactives.dallasnews.com/2017/mavs-draft/',
+      link: 'http://www.jlsmith.net/interactives/mavs-draft/',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python'],
       summary: 'Design and data visualization that combines data points with visualization tools and allows users to engage with the datapoints they care about.'
 
     },
     {
       title: 'How have the Dallas Cowboys performed in the NFL draft?',
-      description: 'Over the years, Dallas\' picks have been a mixed bag .Here\'s our assessment of every one.',
+      description: 'Over the years, Dallas\' picks have been a mixed bag. Here\'s our assessment of every one.',
       date: '4/24/2017',
       comments: '',
       preview: 'cowboys',
       type: 'web',
       web: true,
-      link: 'http://interactives.dallasnews.com/2017/cowboys-draft-data/',
+      link: 'http://www.jlsmith.net/interactives/cowboys-draft/',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python'],
       summary: 'Data visualization that allows users to clearly see the relationship between hundreds of individual datapoints.'
 
     },
     {
       title: 'Behind the numbers: Dak\'s rookie season',
-      description: 'Statistics tell the story, one of the best the NFL has seen in a long, long time',
+      description: 'Statistics tell the story, one of the best the NFL has seen in a long, long time.',
       date: '2/3/2017',
       comments: '',
       preview: 'dak',
       type: 'web',
       web: true,
-      link: 'http://interactives.dallasnews.com/2017/dak-prescott-rookie-season/',
+      link: 'http://www.jlsmith.net/interactives/qbs/',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python'],
       summary: 'Numbers oriented data visualization helping users to formulate a conclusion.'
 
@@ -113,19 +114,19 @@ const resume = {
       preview: 'guns',
       type: 'web',
       web: true,
-      link: 'http://interactives.dallasnews.com/2016/gun-fight/index.html',
+      link: 'http://www.jlsmith.net/interactives/guns/',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python', 'API'],
       summary: 'A user experience that, using data visualization and design, helps to illustrate a controversial issue.'
     },
     {
       title: 'Dallas Cowboys Operation Game',
-      description: 'The classic board game “Operation” requires steady hands. Cowboys team doctors need those too.',
+      description: 'The classic board game “Operation” requires steady hands. Cowboys team doctors need those, too.',
       date: '9/8/2016',
       comments: '',
       preview: 'operation',
       type: 'web',
       web: true,
-      link: 'http://interactives.dallasnews.com/2016/dallas-cowboys-operation/',
+      link: 'http://www.jlsmith.net/interactives/operation/',
       summary: 'A fun interactive game because, who doesn\'t love Operation?!'
     },
     {
@@ -154,7 +155,7 @@ const resume = {
     },
     {
       title: 'Urban Beauty',
-      description: 'An early look at the Nasher Sculpture Garden in Dallas, TX.',
+      description: 'An early look at the Nasher Sculpture Garden in Dallas.',
       date: '2003',
       type: 'print',
       print: true,
@@ -162,7 +163,7 @@ const resume = {
     },
     {
       title: 'The Gulf Between the Wars',
-      description: 'It’s been 12 years since Desert Storm. While the names and places may be the same, the difference can be ofund on the weapons-technology front.',
+      description: 'It’s been 12 years since Desert Storm. While the names and places may be the same, the difference can be found on the weapons-technology front.',
       date: '2003',
       type: 'print',
       print: true,
@@ -173,13 +174,13 @@ const resume = {
     {
       title: 'Interactives Editor',
       time: 'April 2016 – January 2019',
-      description: 'Collaborated with other journalists and developers to create original content that engages with readers through immersive storytelling applications, interactive data visualizations and other data-rich media.',
+      description: 'Collaborated with other journalists and developers to create original content that engaged readers through immersive storytelling applications, interactive data visualizations and other data-rich media.',
       skills: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
     },
     {
       title: 'Graphics and Multimedia Director',
       time: '2003 – 2016',
-      description: 'Led, developed and worked in the graphics and multimedia team to create visual content and data-driven journalism across multiple platforms.The role required innovative practices and strong management skills. The team\'s primary role was to create editorial content such as maps, charts, animations, interactive data visualizations and digital design presentations across multiple platforms.',
+      description: 'Led, developed and worked in the graphics and multimedia team to create visual content and data-driven journalism across multiple platforms. The role required innovative practices and strong management skills. The team\'s primary role was to create editorial content such as maps, charts, animations, interactive data visualizations and digital design presentations across multiple platforms.',
       skills: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
     },
     {
