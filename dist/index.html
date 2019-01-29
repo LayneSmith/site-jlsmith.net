@@ -58,12 +58,16 @@
                 </div>        
             {{/if}}
             <div class="description">
+                
                 <h4 class="title">{{title}}</h4>
+
                 <p class="text">{{description}}
                     {{#if link}}
                         <a href="{{link}}" target="_blank">Link <i class="fas fa-chevron-right"></i></a>
                     {{/if}}
                 </p>
+                
+                
             </div>
         </article>
     {{/each}}
@@ -121,14 +125,34 @@
 <body>
 
     <div class="page-container">
-
+        
         <nav>
             <img src="images/small-signature.svg" alt="Layne signature for nav">
             <span class="chapter">My work</span>
         </nav>
         
         <header>
-            <img class="signature" src="images/large-signature.svg" alt="Layne signature for hero">
+            <div class="signature">
+                <svg id="topSignature" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 546.6 426.2">
+                    <style>
+                        path {
+                            fill: none;
+                            stroke: #2b2722;
+                            stroke-width: 0;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10
+                        }
+                    </style>
+                    <path id="l" d="M175.6 13.2s-38.1 116-77.7 199.9-71.8 137.8-80.8 192.8c0 0 97.6-92.5 158.6-129.8" />
+                    <path id="a" d="M221.3 176.7s-7.5-1.2-14.2 7.2c-6.7 8.4-51.1 62.9-20 68.7 18.7 3.5 40.1-48.1 40.1-48.1s-4.1 35.4 3.2 49.8" />
+                    <path id="y" d="M254 186.4s5.6 59.4 43 19.3 39.1-83.3 39.1-83.3-54.4 106-82 283.4" />
+                    <path id="n" d="M360.1 138.7s-8.2 42.7 1.9 29.3c10-13.4 47.7-69.5 47.7-69.5s-15.5 97.9-7.7 140.6" />
+                    <path id="e" d="M440.7 158.8s47.8 12.1 46.5-19.5c-1.3-31.6-80.9 12.1-46.5 55.3 29 36.3 87.9 30.3 87.9 30.3" />
+                </svg>
+                
+            </div>
+            <!-- <img class="signature" src="images/large-signature.svg" alt="Layne signature for hero"> -->
             <img srcset="images/computer-400.jpg 400w,
                         images/computer-800.jpg 800w,
                         images/computer-1600.jpg 1600w,
@@ -141,7 +165,10 @@
                 alt="Stock photo of a computer">
             <div class="title">
                 <h1>Interactive designer</h1>
-                <p>Combining data and design to create visual story-telling experiences.</p>
+                <p>Combining data and design to create visual storytelling experiences.</p>
+            </div>
+            <div class="arrow bounce">
+                <i class="fas fa-angle-double-down"></i>
             </div>
         </header>
 
@@ -257,7 +284,6 @@
                 <span class="header">EDUCATION</span>
                 <article class="entry">
                     <h4 class="title">Texas Christian University | Fort Worth, TX</h4>
-                    <span class="time">1989-2005</span>
                     <p class="description">B.S. in Journalism</p>
                     <p class="description">B.S. in Criminal Justice</p>
                 </article>
@@ -277,7 +303,7 @@
                 <article class="katie-awards"></article>
                 
                 <h3 class="location">TEXAS APME</h3>
-                <p class="award-description">The <a href="http://www.txapme.com/">Texas Associated Press Managing Editor’s</a> awards is a state-wide contest to recognize outstanding journalism.</p>
+                <p class="award-description">The <a href="http://www.txapme.com/">Texas Associated Press Managing Editor’s</a> awards is a state wide contest to recognize outstanding journalism.</p>
                 <article class="tapme-awards"></article>
                 
                 <h3 class="location">THE DALLAS MORNING NEWS</h3>
