@@ -68,14 +68,14 @@ new ScrollMagic.Scene({
 })
   .on('leave', () => {
     $('nav').animate({
-      top: '-=40',
+      top: '-=65',
     }, 500, () => {
       $('nav').hide()
     });
   })
   .on('enter', () => {
     $('nav').show().animate({
-      top: '+=40',
+      top: '+=65',
     }, 500, () => {
     });
   })
