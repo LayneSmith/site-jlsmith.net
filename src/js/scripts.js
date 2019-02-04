@@ -41,18 +41,18 @@ $('.tapme-awards').append(tapmeHTML);
 // ////////////////////////////////////////////////////////////////////////////
 $(document).on('mouseover', '.entry.web .portfolio-piece', function () {
   const preview = $(this).data('preview');
-  $(this).attr('src', `images/animations/${preview}.gif`);
+  $(this).attr('src', `images/${preview}.gif`);
 });
 
 $(document).on('mouseout', '.entry.web .portfolio-piece', function () {
   const preview = $(this).data('preview');
-  $(this).attr('src', `images/animations/${preview}-poster.gif`);
+  $(this).attr('src', `images/${preview}-poster.gif`);
 });
 
 $(document).on('click', '.entry.web .portfolio-piece', function () {
   const preview = $(this).data('preview');
   const oldSrc = $(this).attr('src');
-  const newsrc = (oldSrc.includes('-poster')) ? `images/animations/${preview}.gif` : `images/animations/${preview}-poster.gif`;
+  const newsrc = (oldSrc.includes('-poster')) ? `images/${preview}.gif` : `images/${preview}-poster.gif`;
   $(this).attr('src', newsrc);
 });
 
@@ -118,9 +118,9 @@ $(document).ready(function(){
       const direction = event.scrollDirection;
       const thisImg = $(this).data('preview');
       if (direction === 'FORWARD') {
-        $(this).attr('src', `images/animations/${thisImg}-poster.gif`);
+        $(this).attr('src', `images/${thisImg}-poster.gif`);
       } else {
-        $(this).attr('src', `images/animations/${thisImg}.gif`);
+        $(this).attr('src', `images/${thisImg}.gif`);
       }      
     })
     .addTo(controller);
@@ -136,9 +136,9 @@ $(document).ready(function(){
       const direction = event.scrollDirection;
       const thisImg = $(this).data('preview');
       if (direction === 'REVERSE') {
-        $(this).attr('src', `images/animations/${thisImg}-poster.gif`);
+        $(this).attr('src', `images/${thisImg}-poster.gif`);
       } else {
-        $(this).attr('src', `images/animations/${thisImg}.gif`);
+        $(this).attr('src', `images/${thisImg}.gif`);
       }      
     })
     .addTo(controller);
@@ -151,7 +151,7 @@ $(document).ready(function(){
     ]);
     new ScrollMagic.Scene({
       triggerElement: this,
-      triggerHook: 0.8,
+      triggerHook: 0.95,
     })
     .setTween(tl)
     .addTo(controller);
