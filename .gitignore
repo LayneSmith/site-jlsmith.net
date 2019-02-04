@@ -4,6 +4,7 @@
 src/python/.env
 src/python/.venv
 assets
+dist
 
 ### Audio ###
 *.aif
