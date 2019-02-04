@@ -1,19 +1,19 @@
 const resume = {
   portfolio: [
-    {
-      title: 'Texas Tracker',
-      description: 'Follow us throughout the Texas Legislative session as we track the key issues and latest developments from the Capitol in Austin.',
-      date: '1/8/2019',
-      comments: '',
-      preview: 'tracker',
-      type: 'web',
-      paywall: true,
-      web: true,
-      link: 'https://interactives.dallasnews.com/2019/texas-tracker/',
-      tech: ['html', 'scss', 'javascript', 'jQuery'],
-      shoutouts: ['@adchavez', '@ArianaNGiorgi',],
-      summary: 'Stylized, interactive front end married to an in-house Django API that allows users to customize their experience.'
-    },
+    // {
+    //   title: 'Texas Tracker',
+    //   description: 'Follow us throughout the Texas Legislative session as we track the key issues and latest developments from the Capitol in Austin.',
+    //   date: '1/8/2019',
+    //   comments: '',
+    //   preview: 'tracker',
+    //   type: 'web',
+    //   paywall: true,
+    //   web: true,
+    //   link: 'https://interactives.dallasnews.com/2019/texas-tracker/',
+    //   tech: ['html', 'scss', 'javascript', 'jQuery'],
+    //   shoutouts: ['@adchavez', '@ArianaNGiorgi',],
+    //   summary: 'Stylized, interactive front end married to an in-house Django API that allows users to customize their experience.'
+    // },
     {
       title: 'The Shifting Tide',
       description: 'Beto O’Rourke’s near loss in the 2018 Senate election shows that while Texas is still red, in some parts of the state, the current may be changing.',
@@ -93,42 +93,42 @@ const resume = {
       summary: 'Data visualization that allows users to clearly see the relationship between hundreds of individual datapoints.'
 
     },
-    {
-      title: 'Behind the numbers: Dak\'s rookie season',
-      description: 'Statistics tell the story, one of the best the NFL has seen in a long, long time.',
-      date: '2/3/2017',
-      comments: '',
-      preview: 'dak',
-      type: 'web',
-      web: true,
-      link: 'http://www.jlsmith.net/interactives/qbs/',
-      tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python'],
-      summary: 'Numbers oriented data visualization helping users to formulate a conclusion.'
+    // {
+    //   title: 'Behind the numbers: Dak\'s rookie season',
+    //   description: 'Statistics tell the story, one of the best the NFL has seen in a long, long time.',
+    //   date: '2/3/2017',
+    //   comments: '',
+    //   preview: 'dak',
+    //   type: 'web',
+    //   web: true,
+    //   link: 'http://www.jlsmith.net/interactives/qbs/',
+    //   tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python'],
+    //   summary: 'Numbers oriented data visualization helping users to formulate a conclusion.'
 
-    },
-    {
-      title: 'The battle for America’s guns',
-      description: 'Lobbyists spend millions of dollars every year trying to influence gun policy in America.',
-      date: '11/18/2016',
-      comments: '',
-      preview: 'guns',
-      type: 'web',
-      web: true,
-      link: 'http://www.jlsmith.net/interactives/guns/',
-      tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python', 'API'],
-      summary: 'A user experience that, using data visualization and design, helps to illustrate a controversial issue.'
-    },
-    {
-      title: 'Dallas Cowboys Operation Game',
-      description: 'The classic board game “Operation” requires steady hands. Cowboys team doctors need those, too.',
-      date: '9/8/2016',
-      comments: '',
-      preview: 'operation',
-      type: 'web',
-      web: true,
-      link: 'http://www.jlsmith.net/interactives/operation/',
-      summary: 'A fun interactive game because, who doesn\'t love Operation?!'
-    },
+    // },
+    // {
+    //   title: 'The battle for America’s guns',
+    //   description: 'Lobbyists spend millions of dollars every year trying to influence gun policy in America.',
+    //   date: '11/18/2016',
+    //   comments: '',
+    //   preview: 'guns',
+    //   type: 'web',
+    //   web: true,
+    //   link: 'http://www.jlsmith.net/interactives/guns/',
+    //   tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'Python', 'API'],
+    //   summary: 'A user experience that, using data visualization and design, helps to illustrate a controversial issue.'
+    // },
+    // {
+    //   title: 'Dallas Cowboys Operation Game',
+    //   description: 'The classic board game “Operation” requires steady hands. Cowboys team doctors need those, too.',
+    //   date: '9/8/2016',
+    //   comments: '',
+    //   preview: 'operation',
+    //   type: 'web',
+    //   web: true,
+    //   link: 'http://www.jlsmith.net/interactives/operation/',
+    //   summary: 'A fun interactive game because, who doesn\'t love Operation?!'
+    // },
     {
       title: 'NASCAR Haulers',
       description: 'When NASCAR comes to town, there\'s more to pack than just suitcases.',
@@ -137,14 +137,14 @@ const resume = {
       print: true,
       preview: 'haulers.jpg',
     },
-    {
-      title: 'Inspired Vision',
-      description: 'Dallas cathedral’s bell tower will complete architect’s dream.',
-      date: '2/26/2005',
-      type: 'print',
-      print: true,
-      preview: 'cathedral.jpg',
-    },
+    // {
+    //   title: 'Inspired Vision',
+    //   description: 'Dallas cathedral’s bell tower will complete architect’s dream.',
+    //   date: '2/26/2005',
+    //   type: 'print',
+    //   print: true,
+    //   preview: 'cathedral.jpg',
+    // },
     {
       title: 'Surgeon’s Big Challenge',
       description: 'Doctors believe extensive study and planning, plus special equipment, will improve odds of success.',
@@ -161,39 +161,39 @@ const resume = {
       print: true,
       preview: 'nasher.jpg',
     },
-    {
-      title: 'The Gulf Between the Wars',
-      description: 'It’s been 12 years since Desert Storm. While the names and places may be the same, the difference can be found on the weapons-technology front.',
-      date: '2003',
-      type: 'print',
-      print: true,
-      preview: 'gulf.jpg',
-    },
+    // {
+    //   title: 'The Gulf Between the Wars',
+    //   description: 'It’s been 12 years since Desert Storm. While the names and places may be the same, the difference can be found on the weapons-technology front.',
+    //   date: '2003',
+    //   type: 'print',
+    //   print: true,
+    //   preview: 'gulf.jpg',
+    // },
   ],
   experience: [
     {
       title: 'Interactives Editor',
       time: 'April 2016 – January 2019',
       description: 'Collaborated with other journalists and developers to create original content that engaged readers through immersive storytelling applications, interactive data visualizations and other data-rich media.',
-      skills: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
+      skills: 'SCSS, D3, ES6, Python, GitHub',
     },
     {
       title: 'Graphics and Multimedia Director',
       time: '2003 – 2016',
       description: 'Led, developed and worked in the graphics and multimedia team to create visual content and data-driven journalism across multiple platforms. The role required innovative practices and strong management skills. The team\'s primary role was to create editorial content such as maps, charts, animations, interactive data visualizations and digital design presentations across multiple platforms.',
-      skills: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
+      skills: 'Project management, public speaking, teaching, jQuery, Javascript',
     },
     {
       title: 'Multimedia Editor',
       time: '2002 – 2003',
       description: 'Created original online content while consistently exercising discretion and judgment to convey the intended message. Researched, wrote and edited long-term assignments as well as projects under tight deadlines.',
-      skills: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
+      skills: 'Adobe Flash, HTML, CSS, user experience, user interface',
     },
     {
       title: 'Senior Artist',
       time: '1998 – 2002',
       description: 'Worked closely with multiple departments to research and report a wide range of visuals used to support and accompany news and editorial coverage. Produced original graphic content including data  visualizations, illustrations and animations, often under tight deadlines.',
-      skills: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
+      skills: 'Adobe Photoshop, Adobe Illustrator, 3D design and illustration, visual design and communication, data visualization',
     },
   ],
   awards: [
@@ -254,7 +254,7 @@ const resume = {
       winner: 'Twin Destinies',
       issued: 'Society of News Design',
       logo: 'snd',
-      image: 'twins',
+      image: 'twins-thumb',
     },
     {
       title: 'Katie Award',

@@ -1,5 +1,5 @@
-<!doctype html>
 <html lang="en">
+    <!doctype html>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133373090-1"></script>
@@ -12,7 +12,7 @@
 </script>
 
 
-<link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
     crossorigin="anonymous">
 
@@ -51,7 +51,7 @@
             {{#if preview}}
                 <div class="piece-container">
                     {{#if web}}
-                        <img class="portfolio-piece" data-preview="{{preview}}"  src="images/animations/{{preview}}-poster.gif" alt="Mock up of {{title}} on laptop screen"/>
+                        <img class="portfolio-piece" data-preview="{{preview}}"  src="images/{{preview}}-poster.gif" alt="Mock up of {{title}} on laptop screen"/>
                     {{else}}
                         <img class="portfolio-piece" data-preview="{{preview}}"  src="images/{{preview}}" alt="Infographic of {{title}}"/>
                     {{/if}}
@@ -66,6 +66,16 @@
                         <a href="{{link}}" target="_blank">Link <i class="fas fa-chevron-right"></i></a>
                     {{/if}}
                 </p>
+
+                {{!--
+                {{#if shoutout}}
+                <p class="text shoutout">With the assist:</p>
+                <ul>
+                    {{#each shoutout}}
+                    <li><a href="https://twitter.com/{{this}}">{{this}}</a></li>
+                    {{/each}}
+                    {{/if}}
+                    --}}
                 
                 
             </div>
@@ -74,24 +84,12 @@
 </script>
 
 <script id="experience-template" type="text/x-handlebars-template">
-    {{#each this}}{{!--
-                {{#if shoutout}}
-                    <p class="text shoutout">With the assist:</p>
-                    <ul> 
-                        {{#each shoutout}}
-                            <li><a href="https://twitter.com/{{this}}">{{this}}</a></li>
-                        {{/each}}
-                {{/if}}
-                --}}
+    {{#each this}}
         <article class="entry">
             <h4 class="title">{{title}}</h4>
             <span class="time">{{time}}</span>
             <p class="description">{{description}}</p>
-            {{!-- <ul class="skills">
-                {{#each skills}}
-                    <li>{{this}}</li>
-                {{/each}}
-            </ul>--}}
+            <p class="skills">Skills: {{skills}}</p>
         </article>
     {{/each}}
 </script>
@@ -105,7 +103,7 @@
         {{/if}}
             {{#if image}}
             <div class="thumb-container">
-                <img class="award-thumb" src="images/award-thumbs/{{image}}.jpg" alt="{{winner}}" />
+                <img class="award-thumb" src="images/{{image}}.jpg" alt="{{winner}}" />
             </div>
             {{/if}}
             <div class="description">
@@ -128,9 +126,7 @@
         
         <nav>
             <img src="images/small-signature.svg" alt="Layne signature for nav">
-            <span class="chapter">My work</span>
-            <a class="email" href="mailto:layne@jlsmith.net"><i class="fas fa-envelope"></i></a>
-            
+            <span class="chapter">My work</span>            
         </nav>
         
         <header>
@@ -154,7 +150,6 @@
                 </svg>
                 
             </div>
-            <!-- <img class="signature" src="images/large-signature.svg" alt="Layne signature for hero"> -->
             <img srcset="images/computer-400.jpg 400w,
                         images/computer-800.jpg 800w,
                         images/computer-1600.jpg 1600w,
@@ -190,20 +185,20 @@
                 <span class="header">SKILLS</span>
                 <div class="logos">
                     <div class="container">
+                        <div class="logo"><i class="fas fa-arrows-alt-h"></i></div>
+                        <span class="skill">Experience design</span>
+                    </div>
+                    <div class="container">
                         <div class="logo"><i class="far fa-eye"></i></div>
                         <span class="skill">Visual communication</span>
                     </div>
                     <div class="container">
-                        <div class="logo"><i class="fas fa-arrows-alt-h"></i></div>
-                        <span class="skill">Interaction design</span>
+                        <div class="logo"><i class="fas fa-pencil-alt"></i></div>
+                        <span class="skill">Design thinking</span>
                     </div>
                     <div class="container">
                         <div class="logo"><i class="far fa-object-group"></i></div>
                         <span class="skill">Visual design</span>
-                    </div>
-                    <div class="container">
-                        <div class="logo"><i class="fas fa-pencil-alt"></i></div>
-                        <span class="skill">Design thinking</span>
                     </div>
                     <div class="container">
                         <div class="logo"><i class="fas fa-chart-area"></i></div>
@@ -271,6 +266,24 @@
                         <div class="logo"><i class="fab fa-github"></i></div>
                         <span class="skill">GitHub</span>
                     </div>
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-gulp"></i></div>
+                        <span class="skill">Gulp</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="learning" data-chapter="Learning">
+                <span class="header">ACTIVELY LEARNING</span>
+                <div class="logos">
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-react"></i></div>
+                        <span class="skill">React</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-node-js"></i></div>
+                        <span class="skill">Node</span>
+                    </div>
                 </div>
             </section>
 
@@ -317,11 +330,16 @@
         </main>
 
         <footer>
-            <a href="https://www.linkedin.com/in/laynesmith/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/LayneSmith" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.flickr.com/photos/41044907@N08/albums" target="_blank"><i class="fab fa-flickr"></i></a>
-            <a href="https://twitter.com/LayneSmith" target="_blank"><i class="fab fa-twitter"></i></a>
-            
+            <div class="copyright">
+                Copyright © Layne Smith <span class="copy-year">2019</span>
+            </div>
+            <div class="email"><a href="mailto:layne@jlsmith.net">layne@jlsmith.net</a></div>
+            <div class="badges">
+                <a href="https://www.linkedin.com/in/laynesmith/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/LayneSmith" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.flickr.com/photos/41044907@N08/albums" target="_blank"><i class="fab fa-flickr"></i></a>
+                <a href="https://twitter.com/LayneSmith" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
         </footer>
 
     </div>
