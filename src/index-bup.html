@@ -1,0 +1,350 @@
+<html lang="en">
+    <!doctype html>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133373090-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133373090-1');
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+
+<title>Layne Smith – Web Designer and Developer</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="keywords" content = "Layne Smith, home, web site, portfolio, hobbies, awards, experience, user experience, ux, interaction design, user experience designer" />
+<meta name="description" content = "Check out Layne Smith’s personal web site. Highlights his web design/devlopment experience, work, skills, photography and awards." />
+<meta name="author" content = "Layne Smith" />
+<meta name = "robots" content="index, follow">
+<link rel = "canonical" href="http://jlsmith.net/" />
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Layne Smith – Web Designer and Developer" />
+<meta property="og:description" content="Highlighting his web design/devlopment experience, work, skills, photography and awards." />
+<meta property="og:image" content="http://www.jlsmith.net/images/share.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Layne's name on a computer background" />
+<meta property="og:url" content="http://www.jlsmith.net" />
+<meta property="og:site_name" content="Layne Smith’s Design Portfolio" />
+
+<meta name="twitter:title" content="Layne Smith – Web Designer and Developer">
+<meta name="twitter:description" content="Highlighting his web design/devlopment experience, work, skills, photography and awards.">
+<meta name="twitter:image" content="http://jlsmith.net/images/share.jpg">
+<meta name="twitter:site" content="@LayneSmith">
+<meta name="twitter:creator" content="@LayneSmith">
+
+<script id="portfolio-template" type="text/x-handlebars-template">
+    {{#each this}}
+        <article class="entry {{type}}">
+            {{#if preview}}
+                <div class="piece-container">
+                    {{#if web}}
+                        <img class="portfolio-piece" data-preview="{{preview}}"  src="images/{{preview}}-poster.gif" alt="Mock up of {{title}} on laptop screen"/>
+                    {{else}}
+                        <img class="portfolio-piece" data-preview="{{preview}}"  src="images/{{preview}}" alt="Infographic of {{title}}"/>
+                    {{/if}}
+                </div>        
+            {{/if}}
+            <div class="description">
+                
+                <h4 class="title">{{title}}</h4>
+
+                <p class="text">{{description}}
+                    {{#if link}}
+                        <a href="{{link}}" target="_blank">Link <i class="fas fa-chevron-right"></i></a>
+                    {{/if}}
+                </p>
+
+                {{!--
+                {{#if shoutout}}
+                <p class="text shoutout">With the assist:</p>
+                <ul>
+                    {{#each shoutout}}
+                    <li><a href="https://twitter.com/{{this}}">{{this}}</a></li>
+                    {{/each}}
+                    {{/if}}
+                    --}}
+                
+                
+            </div>
+        </article>
+    {{/each}}
+</script>
+
+<script id="experience-template" type="text/x-handlebars-template">
+    {{#each this}}
+        <article class="entry">
+            <h4 class="title">{{title}}</h4>
+            <span class="time">{{time}}</span>
+            <p class="description">{{description}}</p>
+            <p class="skills">Skills: {{skills}}</p>
+        </article>
+    {{/each}}
+</script>
+
+<script id="award-template" type="text/x-handlebars-template">
+    {{#each this}}
+        {{#if image}}
+            <div class="entry thumb">
+        {{else}}
+            <div class="entry no-thumb">
+        {{/if}}
+            {{#if image}}
+            <div class="thumb-container">
+                <img class="award-thumb" src="images/{{image}}.jpg" alt="{{winner}}" />
+            </div>
+            {{/if}}
+            <div class="description">
+                <h4 class="title">{{title}} - {{time}}</h4>
+                <span class="winner">
+                    {{winner}}
+                </span>
+                <p class="text">{{description}}</p>
+                {{#if link}}
+                <a href="{{link}}" target="_blank">Link <i class="fas fa-chevron-right"></i></a>
+                {{/if}}
+            </div>
+        </div>
+    {{/each}}
+</script>
+
+<body>
+
+    <div class="page-container">
+        
+        <nav>
+            <img src="images/small-signature.svg" alt="Layne signature for nav">
+            <span class="chapter">My work</span>            
+        </nav>
+        
+        <header>
+            <div class="signature">
+                <svg id="topSignature" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 546.6 426.2">
+                    <style>
+                        path {
+                            fill: none;
+                            stroke: #2b2722;
+                            stroke-width: 0;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10
+                        }
+                    </style>
+                    <path id="l" d="M175.6 13.2s-38.1 116-77.7 199.9-71.8 137.8-80.8 192.8c0 0 97.6-92.5 158.6-129.8" />
+                    <path id="a" d="M221.3 176.7s-7.5-1.2-14.2 7.2c-6.7 8.4-51.1 62.9-20 68.7 18.7 3.5 40.1-48.1 40.1-48.1s-4.1 35.4 3.2 49.8" />
+                    <path id="y" d="M254 186.4s5.6 59.4 43 19.3 39.1-83.3 39.1-83.3-54.4 106-82 283.4" />
+                    <path id="n" d="M360.1 138.7s-8.2 42.7 1.9 29.3c10-13.4 47.7-69.5 47.7-69.5s-15.5 97.9-7.7 140.6" />
+                    <path id="e" d="M440.7 158.8s47.8 12.1 46.5-19.5c-1.3-31.6-80.9 12.1-46.5 55.3 29 36.3 87.9 30.3 87.9 30.3" />
+                </svg>
+                
+            </div>
+            <img srcset="images/computer-400.jpg 400w,
+                        images/computer-800.jpg 800w,
+                        images/computer-1600.jpg 1600w,
+                        images/computer-3200.jpg 3200w"
+                sizes="(max-width: 400px) 100vw,
+                        (max-width: 800px) 100vw,
+                        1600px" 
+                src="images/computer-3200.jpg"
+                class="hero"
+                alt="Stock photo of a computer">
+            <div class="title">
+                <h1>Interactive designer</h1>
+                <p>Combining data and design to create visual storytelling experiences.</p>
+            </div>
+            <div class="arrow bounce">
+                <i class="fas fa-angle-double-down"></i>
+            </div>
+        </header>
+
+        <main>
+            <section class="portfolio" data-chapter="My work">
+                <span class="header">MY WORK</span>
+            </section>
+
+            <section class="experience" data-chapter="Experience">
+                <span class="header">EXPERIENCE</span>
+                <div class="logo">
+                    <img src="images/dmn-logo.svg" alt="dallas morning news logo">
+                </div>
+            </section>
+
+            <section class="skills" data-chapter="Skills">
+                <span class="header">SKILLS</span>
+                <div class="logos">
+                    <div class="container">
+                        <div class="logo"><i class="fas fa-arrows-alt-h"></i></div>
+                        <span class="skill">Experience design</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="far fa-eye"></i></div>
+                        <span class="skill">Visual communication</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fas fa-pencil-alt"></i></div>
+                        <span class="skill">Design thinking</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="far fa-object-group"></i></div>
+                        <span class="skill">Visual design</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fas fa-chart-area"></i></div>
+                        <span class="skill">Data visualization</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fas fa-sitemap"></i></div>
+                        <span class="skill">Project management</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fas fa-bullhorn"></i></div>
+                        <span class="skill">Public speaking</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fas fa-chalkboard"></i></div>
+                        <span class="skill">Teaching</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="development" data-chapter="Development tools">
+                <span class="header">DEVELOPMENT</span>
+                <div class="logos">
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-adobe"></i></div>
+                        <span class="skill">Photoshop</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-adobe"></i></div>
+                        <span class="skill">Illustrator</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-html5"></i></div>
+                        <span class="skill">HTML</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-css3-alt"></i></div>
+                        <span class="skill">CSS</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-sass"></i></div>
+                        <span class="skill">SCSS</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-js-square"></i></div>
+                        <span class="skill">Javascript</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fas fa-code"></i></div>
+                        <span class="skill">JQuery</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fas fa-code"></i></div>
+                        <span class="skill">ES6</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fas fa-chart-pie"></i></div>
+                        <span class="skill">D3</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-python"></i></div>
+                        <span class="skill">Python</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-github"></i></div>
+                        <span class="skill">GitHub</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-gulp"></i></div>
+                        <span class="skill">Gulp</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="learning" data-chapter="Learning">
+                <span class="header">ACTIVELY LEARNING</span>
+                <div class="logos">
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-react"></i></div>
+                        <span class="skill">React</span>
+                    </div>
+                    <div class="container">
+                        <div class="logo"><i class="fab fa-node-js"></i></div>
+                        <span class="skill">Node</span>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 
+            <section class="github">
+                <span class="header">REPOS</span>
+            </section>
+            -->
+            
+
+            <section class="education" data-chapter="Education">
+                <span class="header">EDUCATION</span>
+                <article class="entry">
+                    <h4 class="title">Texas Christian University | Fort Worth, TX</h4>
+                    <p class="description">B.S. in Journalism</p>
+                    <p class="description">B.S. in Criminal Justice</p>
+                </article>
+            </section>
+
+
+            <section class="awards" data-chapter="Awards">
+
+                <span class="header">AWARDS</span>
+                
+                <h3 class="location">SOCIETY OF NEWS DESIGN</h3>
+                <p class="award-description">The <a href="https://www.snd.org/about/">Society of News Design</a> is an international organization dedicated to enhancing the field of visual communication.</p>
+                <article class="snd-awards"></article>
+
+                <h3 class="location">PRESS CLUB OF DALLAS</h3>
+                <p class="award-description">The <a href="http://pressclubdallas.com/about/">Press Club of Dallas</a> is a regional organization committed to promoting the fundamental tenets of communications and journalism.</p>
+                <article class="katie-awards"></article>
+                
+                <h3 class="location">TEXAS APME</h3>
+                <p class="award-description">The <a href="http://www.txapme.com/">Texas Associated Press Managing Editor’s</a> awards is a state wide contest to recognize outstanding journalism.</p>
+                <article class="tapme-awards"></article>
+                
+                <h3 class="location">THE DALLAS MORNING NEWS</h3>
+                <article class="entry">
+                    <center><h4 class="title">2017 Visual Journalist of the Year</h4></center>
+                </article>
+                
+            </section>
+        </main>
+
+        <footer>
+            <div class="copyright">
+                Copyright © Layne Smith <span class="copy-year">2019</span>
+            </div>
+            <div class="email"><a href="mailto:layne@jlsmith.net">layne@jlsmith.net</a></div>
+            <div class="badges">
+                <a href="https://www.linkedin.com/in/laynesmith/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/LayneSmith" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.flickr.com/photos/41044907@N08/albums" target="_blank"><i class="fab fa-flickr"></i></a>
+                <a href="https://twitter.com/LayneSmith" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+<script type="text/javascript" src="js/scripts.min.js"></script>
+</html>
