@@ -23,6 +23,7 @@ const resume = {
       type: 'web',
       web: true,
       link: 'http://www.jlsmith.net/interactives/election/',
+      code: 'https://github.com/LayneSmith/dmn_project-code-files/tree/master/elections',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'ScrollMagic', 'GSAP'],
       summary: 'In-depth data analysis converted into a user experience that helps tell a very comlicated story.'
 
@@ -36,6 +37,7 @@ const resume = {
       type: 'web',
       web: true,
       link: 'http://www.jlsmith.net/interactives/schools/',
+      code: 'https://github.com/LayneSmith/dmn_project-code-files/tree/master/grades',
       tech: ['html', 'scss', 'javascript', 'jQuery', 'D3', 'MapboxGL', 'SQL'],
       summary: 'Big data analysis and visualization customized to each user\'s input.'
 
@@ -174,27 +176,27 @@ const resume = {
     {
       title: 'Interactives Editor',
       time: 'April 2016 – January 2019',
-      description: 'Collaborated with other journalists and developers to create original content that engaged readers through immersive storytelling applications, interactive data visualizations and other data-rich media.',
+      description: 'Designed and developed responsive interactive presentations, meeting goals to engage with users and contribute to company conversion rates, overall traffic and time spent on site. Each presentation process included a creative brainstorming role, immediately followed by a technical developmental role. Creative roles included sketching, wireframing, prototyping and feedback while developmental roles included implementation using HTML, CSS, JavaScript and D3. Contributed to monthly critiquing sessions and departmental hack-a-thons in which unique, innovative solutions were created to provide value to internal and external users.',
       skills: 'SCSS, D3, ES6, Python, GitHub',
     },
     {
       title: 'Graphics and Multimedia Director',
       time: '2003 – 2016',
-      description: 'Led, developed and worked in the graphics and multimedia team to create visual content and data-driven journalism across multiple platforms. The role required innovative practices and strong management skills. The team\'s primary role was to create editorial content such as maps, charts, animations, interactive data visualizations and digital design presentations across multiple platforms.',
+      description: 'Led, developed and worked in the graphics and multimedia team to create visual content and data-driven journalism across multiple platforms including print, mobile and desktop. The team\'s primary role was to collaborate with different product owners, creating visual content such as interactive data visualizations, graphics and animations.',
       skills: 'Project management, public speaking, teaching, jQuery, Javascript',
     },
     {
       title: 'Multimedia Editor',
       time: '2002 – 2003',
-      description: 'Created original online content while consistently exercising discretion and judgment to convey the intended message. Researched, wrote and edited long-term assignments as well as projects under tight deadlines.',
+      description: 'Worked closely with business partners to create online content covering multiple subjects, often on tight deadlines. Projects followed a set of best practices, styles and operational guidelines meant to engage users while reducing production times.',
       skills: 'Adobe Flash, HTML, CSS, user experience, user interface',
     },
-    {
-      title: 'Senior Artist',
-      time: '1998 – 2002',
-      description: 'Worked closely with multiple departments to research and report a wide range of visuals used to support and accompany news and editorial coverage. Produced original graphic content including data  visualizations, illustrations and animations, often under tight deadlines.',
-      skills: 'Adobe Photoshop, Adobe Illustrator, 3D design and illustration, visual design and communication, data visualization',
-    },
+    // {
+    //   title: 'Senior Artist',
+    //   time: '1998 – 2002',
+    //   description: 'Worked closely with multiple departments to research and report a wide range of visuals used to support and accompany news and editorial coverage. Produced original graphic content including data  visualizations, illustrations and animations, often under tight deadlines.',
+    //   skills: 'Adobe Photoshop, Adobe Illustrator, 3D design and illustration, visual design and communication, data visualization',
+    // },
   ],
   awards: [
     {
