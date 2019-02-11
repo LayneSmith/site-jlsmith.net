@@ -62,22 +62,15 @@
                 <h4 class="title">{{title}}</h4>
 
                 <p class="text">{{description}}
-                    {{#if link}}
-                        <a href="{{link}}" target="_blank">Link <i class="fas fa-chevron-right"></i></a>
-                    {{/if}}
+                    <div class="links">
+                        {{#if link}}
+                            <a href="{{link}}" target="_blank"><i class="fas fa-link"></i>Link</a>
+                        {{/if}}
+                        {{#if code}}
+                            <a href="{{code}}" target="_blank"><i class="fab fa-github"></i>Repo</a>
+                        {{/if}}
+                    </div>
                 </p>
-
-                {{!--
-                {{#if shoutout}}
-                <p class="text shoutout">With the assist:</p>
-                <ul>
-                    {{#each shoutout}}
-                    <li><a href="https://twitter.com/{{this}}">{{this}}</a></li>
-                    {{/each}}
-                    {{/if}}
-                    --}}
-                
-                
             </div>
         </article>
     {{/each}}
@@ -130,6 +123,9 @@
         </nav>
         
         <header>
+            <div class="email">
+                <a href="mailto:layne@jlsmith.net"><i class="far fa-envelope"></i></a>
+            </div>
             <div class="signature">
                 <svg id="topSignature" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 546.6 426.2">
                     <style>
@@ -161,8 +157,9 @@
                 class="hero"
                 alt="Stock photo of a computer">
             <div class="title">
-                <h1>Interactive designer</h1>
-                <p>Combining data and design to create visual storytelling experiences.</p>
+                <h1>Design thinking</h1>
+                <h1>Data visualization</h1>
+                <p>Combining design and data to create visual storytelling experiences.</p>
             </div>
             <div class="arrow bounce">
                 <i class="fas fa-angle-double-down"></i>
@@ -170,6 +167,16 @@
         </header>
 
         <main>
+            <section class="quotes">
+                <p class="quote">
+                    <i class="fas fa-quote-left"></i>Simply put, Layne’s interactive graphics are among the best we’ve seen, full stop. His work is consistently smart,
+                    informative, intuitive, inviting and simply gorgeous to look at. Layne’s interactives invite (almost require) the user
+                    to explore — to fiddle with knobs and levers and see how the narrative changes. This is visual storytelling at its very
+                    best.<i class="fas fa-quote-right"></i>  
+                </p>
+                <p class="attribution">- The Dallas Morning News, March 7, 2018</p>
+
+            </section>
             <section class="portfolio" data-chapter="My work">
                 <span class="header">MY WORK</span>
             </section>
@@ -323,7 +330,7 @@
                 
                 <h3 class="location">THE DALLAS MORNING NEWS</h3>
                 <article class="entry">
-                    <center><h4 class="title">2017 Visual Journalist of the Year</h4></center>
+                    <center><h4 class="title">2017 Digital Storyteller of the Year</h4></center>
                 </article>
                 
             </section>
@@ -337,8 +344,8 @@
             <div class="badges">
                 <a href="https://www.linkedin.com/in/laynesmith/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://github.com/LayneSmith" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.flickr.com/photos/41044907@N08/albums" target="_blank"><i class="fab fa-flickr"></i></a>
-                <a href="https://twitter.com/LayneSmith" target="_blank"><i class="fab fa-twitter"></i></a>
+                <!-- <a href="https://www.flickr.com/photos/41044907@N08/albums" target="_blank"><i class="fab fa-flickr"></i></a>
+                <a href="https://twitter.com/LayneSmith" target="_blank"><i class="fab fa-twitter"></i></a> -->
             </div>
         </footer>
 
