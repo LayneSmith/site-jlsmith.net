@@ -21,10 +21,11 @@ body {
 
 .page-container {
     width: 100%;
+    border-top: 10px solid $dark;
 
     a {
-        color: $chartBlue;
         text-decoration: none;
+        color: $chartBlue;
     }
 
     nav {
@@ -66,6 +67,19 @@ body {
     header {
         width: 100%;
         position: relative;
+
+        .email {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: $dark;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            a {
+                color: $light;
+            }
+        }
         
         .title {
             padding: 2rem;
@@ -76,6 +90,7 @@ body {
                 text-transform: uppercase;
                 letter-spacing: 0.3rem;
                 margin-bottom: 10px;
+                font-size: 1.6rem;
             }
             
             p {
@@ -86,7 +101,7 @@ body {
         .signature {
             position: absolute;
             right: 27vw;
-            bottom: 10rem;
+            top: 8rem;
             width: 68vw;
             z-index: 10;
             display: none;
@@ -135,7 +150,7 @@ body {
 }
 
 section {
-    padding: 50px 20px;
+    padding: 50px 40px;
     margin: 0px auto 0px;
     width: 100%;
     max-width: 900px;
@@ -170,7 +185,27 @@ section {
         width: 100%;
     }
 }
-
+section.quotes {
+    background: $dark;
+    max-width: none;
+    color: $light;
+    p {
+        max-width: 800px;
+        margin: 0px auto;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        .fa-quote-left {
+            margin-right: 20px;
+        }
+        .fa-quote-right {
+            margin: 0px 20px;
+        }
+    }
+    .attribution {
+        width: 100%;
+        text-align: right;    
+    }
+}
 section.portfolio {
     
     article {
@@ -193,20 +228,36 @@ section.portfolio {
             
             .title {
                 display: block;
-                margin: 10px 0px;
+                margin: 20px 0px;
                 text-align: center;
                 width: 100%;
+                font-size: 1.6rem;
+                font-weight: 100;
             }
-            
-            a {
-                display: inline;
-                white-space: nowrap;
-                font-weight: 700;
-                
-                .fas {
-                    font-size: 12px;
+            .links {
+                margin-top: 30px;
+                display: block;
+                a {
+                    width: 150px;
+                    margin: 0px auto;
+                    border: 1px solid $chartBlue;
+                    text-align: center;
+                    display: block;
+                    white-space: nowrap;
+                    font-weight: 700;
+                    margin-top: 15px;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    padding: 10px;
+                    &:hover {
+                        background-color: lighten($chartBlue, 50);
+                    }
+                }
+                i {
+                    margin-right: 10px;
                 }
             }
+            
 
             .badges {
                 font-size: 1.3rem;
@@ -236,8 +287,8 @@ section.experience {
         margin: 30px 0px 40px;
         
         img {
-            max-width: 20rem;
-            width: 40%;
+            max-width: 15rem;
+            width: 70%;
         }
     }
     
@@ -435,21 +486,6 @@ section.awards {
     }
 }
 
-@media(min-width: 527px) {
-
-    .page-container {
-    
-        header {
-            
-            .signature {
-                right: 31vw;
-                bottom: 8rem;
-                width: 63vw;
-            }
-        }
-    }
-}
-
 @media(min-width: 600px) {
 
     .page-container {
@@ -458,7 +494,7 @@ section.awards {
         
             .title {
                 position: absolute;
-                bottom: 3rem;
+                bottom: 1rem;
                 left: 2rem;
                 width: 100%;
                 padding: 0px;
@@ -466,7 +502,7 @@ section.awards {
         
             .signature {
                 right: 44vw;
-                bottom: 9rem;
+                top: 2rem;
                 width: 52vw;
             }
         }
@@ -502,6 +538,12 @@ section.awards {
                     font-size: 1.5rem;
                     width: 100%;
                 }
+
+                .links a {
+                    display: inline-block;
+                    width: 100px;
+                    margin-right: 10px;
+                }
             }
         }
     }
@@ -523,15 +565,6 @@ section.awards {
                 bottom: 16vh;
                 width: 54vw;
             }
-        
-            .title {
-                position: absolute;
-                bottom: 5rem;
-        
-                h1 {
-                    font-size: 1.7rem;
-                }
-            }
         }
     }
 }
@@ -547,12 +580,12 @@ section.awards {
 
             .signature {
                 left: 4vw;
-                top: 2vh;
-                width: 50vw;
+                top: 3rem;
+                width: 55vw;
             }
     
             img {
-                width: 110%;
+                width: 115%;
                 margin-left: 0px;
             }
 
@@ -569,6 +602,10 @@ section.awards {
             .title {
                 font-size: 1.8rem;
                 bottom: 1.8rem;
+            }
+            p.text a{
+                display: inline;
+
             }
         }
     }
